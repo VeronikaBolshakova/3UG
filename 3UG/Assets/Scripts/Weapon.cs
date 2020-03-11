@@ -7,19 +7,23 @@ public class Weapon : MonoBehaviour
     int bullet = 1;
     public Transform firepoint;
     public GameObject bulletPrefab;
-    void Update()
+    private float bulletCooldownCounter = 2.0f;
+    public float bulletCooldown = 2.0f;
+    void FixedUpdate()
     {
-        if (Input.GetButtonDown("Fire1") && bullet == 1)
+        bulletCooldownCounter -= Time.deltaTime;
+        if (Input.GetButtonDown("Fire2") && bullet == 1 && bulletCooldownCounter <= 0)
         {
             Shoot();
             bullet--;
+            bulletCooldownCounter = bulletCooldown;
         }
     }
     void Shoot()
     {
         Instantiate(bulletPrefab, firepoint.GetComponent<Transform>());
     }
-    void ammo (int ammo)
+    void Ammo (int ammo)
     {
         bullet = ammo;
     }

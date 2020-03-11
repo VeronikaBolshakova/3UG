@@ -13,6 +13,12 @@ public class movement : MonoBehaviour
     Vector2 hVector = new Vector2(0.2f, 0.0f);
     public float hSpeed = 0.1f;
     public int ammo = 1;
+    public GameObject tridentPrefab;
+    public Transform attackpoint;
+    public GameObject Enemy;
+    public float tridentCooldown = 1.0f;
+    private float tridentCooldownCounter = 1.0f;
+    public int health = 10;
     void Start()
     {
         jump = 2;
@@ -21,6 +27,7 @@ public class movement : MonoBehaviour
 
     void FixedUpdate()
     {
+        tridentCooldownCounter -= Time.deltaTime;
         if (Input.GetKey(KeyCode.D))
         {
             player.AddForce(hVector, ForceMode2D.Impulse);
@@ -38,6 +45,17 @@ public class movement : MonoBehaviour
         {
             jump--;
             player.AddForce(new Vector2(0, vVector));
+        }
+
+        if (Input.GetButtonDown("Fire1") && tridentCooldownCounter <= 0)
+        {
+            Attack();
+            tridentCooldownCounter = tridentCooldown;
+        }
+
+        if (health <= 0)
+        {
+            Destroy(this.gameObject);
         }
     }
 
@@ -62,7 +80,7 @@ public class movement : MonoBehaviour
         if (environment.gameObject.tag == "bullet")
         {
             Destroy(environment.gameObject);
-            receptor.SendMessage("ammo", ammo);
+            receptor.SendMessage("Ammo", ammo);
         }
     }
 
@@ -75,5 +93,15 @@ public class movement : MonoBehaviour
             player.drag = drag;
             hSpeed = 0.1f;
         }
+    }
+
+    void Attack()
+    {
+        Instantiate(tridentPrefab, attackpoint.GetComponent<Transform>());
+    }
+
+    void LoseHealth (int enemyDamage)
+    {
+        health -= enemyDamage;
     }
 }
