@@ -43,14 +43,6 @@ public class Enemy : MonoBehaviour
         {
             health -= tridentDamage;
         }
-    }
-
-    void OnCollisionEnter2D(Collision2D player)
-    {
-        if (player.gameObject.tag == "player")
-        {
-            player.SendMessage("LoseHealth", enemyDamage);
-        }
-    }    
+    }   
 }
 

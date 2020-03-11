@@ -7,7 +7,7 @@ public class movement : MonoBehaviour
     public static int jump;
     public int vVector = 200;
     private Rigidbody2D player;
-    public GameObject receptor;
+    public GameObject gun;
     public int numberOfJumps = 2;
     public float drag = 3.0f;
     Vector2 hVector = new Vector2(0.2f, 0.0f);
@@ -19,6 +19,7 @@ public class movement : MonoBehaviour
     public float tridentCooldown = 1.0f;
     private float tridentCooldownCounter = 1.0f;
     public int health = 10;
+    public int enemyDamage = 1;
     void Start()
     {
         jump = 2;
@@ -59,11 +60,16 @@ public class movement : MonoBehaviour
         }
     }
 
-    void OnCollisionEnter2D(Collision2D floor)
+    void OnCollisionEnter2D(Collision2D collider)
     {
-        if (floor.gameObject.tag == "floor")
+        if (collider.gameObject.tag == "floor")
         {
             jump = numberOfJumps;
+        }
+
+        if (collider.gameObject.tag == "enemy")
+        {
+            health -= enemyDamage;
         }
     }
 
@@ -80,7 +86,7 @@ public class movement : MonoBehaviour
         if (environment.gameObject.tag == "bullet")
         {
             Destroy(environment.gameObject);
-            receptor.SendMessage("Ammo", ammo);
+            gun.SendMessage("Ammo", ammo);
         }
     }
 
@@ -98,10 +104,5 @@ public class movement : MonoBehaviour
     void Attack()
     {
         Instantiate(tridentPrefab, attackpoint.GetComponent<Transform>());
-    }
-
-    void LoseHealth (int enemyDamage)
-    {
-        health -= enemyDamage;
     }
 }

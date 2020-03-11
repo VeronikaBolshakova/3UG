@@ -3,7 +3,10 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - floor
+  - player
+  - bullet
   layers:
   - Default
   - TransparentFX
@@ -44,9 +47,9 @@ TagManager:
   - name: Background
     uniqueID: 1012580517
     locked: 0
-  - name: Backgorund_Objects
+  - name: Player
     uniqueID: 2972263783
     locked: 0
-  - name: Ground
+  - name: Gun
     uniqueID: 1627028089
     locked: 0

@@ -7,7 +7,7 @@ public class trident : MonoBehaviour
     public float tridentLifeTime = 0.2f;
     public GameObject receptorEnemy;
     public int damage = 2;
-    public int tridentSpeed = 50;
+    public int tridentSpeed = 30;
     void Start()
     {
         receptorEnemy = GameObject.Find("Enemy");
