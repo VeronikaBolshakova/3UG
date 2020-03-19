@@ -9,6 +9,8 @@ TagManager:
   - bullet
   - water
   - propeller
+  - enemy
+  - trident
   layers:
   - Default
   - TransparentFX

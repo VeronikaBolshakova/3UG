@@ -9,7 +9,7 @@ public class Enemy : MonoBehaviour
     public int tridentDamage = 2;
     public GameObject gun;
     private int ammo = 1;
-    public float Speed = 1.5f;
+    public float Speed = 4.5f;
     public GameObject player;
     public int enemyDamage = 1;
 

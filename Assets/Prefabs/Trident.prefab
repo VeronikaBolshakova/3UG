@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8846836697668741891}
   m_Layer: 0
   m_Name: Trident
-  m_TagString: Untagged
+  m_TagString: trident
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
