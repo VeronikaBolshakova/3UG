@@ -69,9 +69,9 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1627028089
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 36194075c8428934d81e6a4f579dd97a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6cbe73cda6d07584cb004330ea352662, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -91,13 +91,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 5866869381076971386}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 206c5b0f57f79894589c4716306c2433, type: 3}
+  m_Script: {fileID: 11500000, guid: 0bf3292dcab6da545ad3713262a950ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   tridentLifeTime: 0.2
-  receptorEnemy: {fileID: 0}
   damage: 2
-  tridentSpeed: 30
+  tridentSpeed: 20
+  attackPoint: {fileID: 0}
 --- !u!61 &2874879499386029542
 BoxCollider2D:
   m_ObjectHideFlags: 0
