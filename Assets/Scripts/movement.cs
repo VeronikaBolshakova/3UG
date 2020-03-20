@@ -301,4 +301,12 @@ public class movement : MonoBehaviour
             rClick = true;
         }
     }
+
+    void QuitGame()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
+    }
 }
