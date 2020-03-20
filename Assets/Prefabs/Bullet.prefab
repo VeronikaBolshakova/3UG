@@ -69,14 +69,14 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1322703513
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 78940c2500e217d42a08877e36debb14, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0976bbdddc61f2e47b3186224c6138c6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.12, y: 0.47}
+  m_Size: {x: 1.59, y: 1.11}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -98,6 +98,7 @@ MonoBehaviour:
   bulletBackSpeed: 10
   player: {fileID: 0}
   gun: {fileID: 0}
+  firePoint: {fileID: 0}
   lifeTime: 3
 --- !u!50 &5515242559278598059
 Rigidbody2D:
@@ -137,8 +138,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.12, y: 0.47}
-    newSize: {x: 1.12, y: 0.47}
+    oldSize: {x: 1.59, y: 1.11}
+    newSize: {x: 1.59, y: 1.11}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0

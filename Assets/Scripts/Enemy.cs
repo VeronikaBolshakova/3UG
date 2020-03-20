@@ -9,7 +9,7 @@ public class Enemy : MonoBehaviour
     public int tridentDamage = 2;
     public GameObject gun;
     private int ammo = 1;
-    public float Speed = 4.5f;
+    public float Speed = 4.0f;
     public GameObject player;
     public int enemyDamage = 1;
 
@@ -29,27 +29,40 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    void OnTriggerEnter2D(Collider2D weapon)
+    void OnTriggerEnter2D(Collider2D collider)
     {
-        if (weapon.gameObject.tag == "bullet")
+        if (collider.gameObject.tag == "bullet")
         {
             health -= bulletDamage;
-            Destroy(weapon.gameObject);
+            Destroy(collider.gameObject);
             gun.SendMessage("Ammo", ammo);
 
         }
 
-        if (weapon.gameObject.tag == "trident")
+        if (collider.gameObject.tag == "trident")
         {
             health -= tridentDamage;
+        }
+
+        if (collider.gameObject.tag == "platform")
+        {
+            this.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 300));
+        }
+    }
+
+    void OnCollisionExit2D(Collision2D collider)
+    {
+        if (collider.gameObject.tag == "floor")
+        {
+            Speed = 2.0f;
         }
     }
 
     void OnCollisionEnter2D(Collision2D collider)
     {
-        if (collider.gameObject.tag == "platform")
+        if (collider.gameObject.tag == "floor")
         {
-            this.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 300));
+            Speed = 4.5f;
         }
     }
 }
