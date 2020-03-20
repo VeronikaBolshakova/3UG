@@ -276,6 +276,7 @@ public class movement : MonoBehaviour
         if (Input.GetKey(KeyCode.W))
         {
             player.AddForce(vVectorWaterPropelled, ForceMode2D.Impulse);
+
         }
     }
 

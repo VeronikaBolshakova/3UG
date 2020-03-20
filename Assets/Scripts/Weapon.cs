@@ -16,6 +16,13 @@ public class Weapon : MonoBehaviour
         GetKey();
     }
 
+    void GetKey()
+    {
+        if (Input.GetButtonDown("Fire2") && bulletCooldownCounter <= 0)
+        {
+            lClick = true;
+        }
+    }
     void FixedUpdate()
     {
         bulletCooldownCounter -= Time.deltaTime;
@@ -36,12 +43,6 @@ public class Weapon : MonoBehaviour
         bullet = ammo;
     }
 
-    void GetKey()
-    {
-        if (Input.GetButtonDown("Fire2") && bulletCooldownCounter <= 0)
-        {
-            lClick = true;
-        }
-    }
+
 
 }
