@@ -42,6 +42,7 @@ public class movement : MonoBehaviour
     void Update()
     {
         GetKeys();
+        QuitGame();
     }
 
     void FixedUpdate()
@@ -304,7 +305,7 @@ public class movement : MonoBehaviour
 
     void QuitGame()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKey("escape"))
         {
             Application.Quit();
         }

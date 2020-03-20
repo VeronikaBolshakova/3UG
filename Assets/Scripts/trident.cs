@@ -7,14 +7,13 @@ public class trident : MonoBehaviour
     public float tridentLifeTime = 0.2f;
     public int damage = 2;
     public int tridentSpeed = 20;
-    int direction = 0;
     public GameObject attackPoint;
+
     void Start()
     {
         attackPoint = GameObject.Find("attackpointSupport");
         Destroy(this.gameObject, tridentLifeTime);
     }
-
 
     void FixedUpdate()
     {
