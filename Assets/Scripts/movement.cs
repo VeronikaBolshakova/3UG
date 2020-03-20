@@ -42,7 +42,6 @@ public class movement : MonoBehaviour
     void Update()
     {
         GetKeys();
-        QuitGame();
     }
 
     void FixedUpdate()
@@ -300,14 +299,6 @@ public class movement : MonoBehaviour
         if (Input.GetButtonDown("Fire1") && tridentCooldownCounter <= 0)
         {
             rClick = true;
-        }
-    }
-
-    void QuitGame()
-    {
-        if (Input.GetKey("escape"))
-        {
-            Application.Quit();
         }
     }
 }
