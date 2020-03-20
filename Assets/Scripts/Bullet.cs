@@ -8,6 +8,7 @@ public class Bullet : MonoBehaviour
     public float bulletBackSpeed = 10.0f;
     public GameObject player;
     public GameObject gun;
+    public GameObject firePoint;
     public float lifeTime = 3.0f;
     int ammo = 1;
     //public float bulletLifeTime = 2.0f;
@@ -15,7 +16,8 @@ public class Bullet : MonoBehaviour
     {
         player = GameObject.Find("Player");
         gun = GameObject.Find("Gun");
-        this.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(bulletSpeed, 0));
+        firePoint = GameObject.Find("firepointSupport");
+        this.gameObject.GetComponent<Rigidbody2D>().AddForce((this.transform.position - firePoint.transform.position).normalized * bulletSpeed);
         //Destroy(this.gameObject, bulletLifeTime);
     }
 

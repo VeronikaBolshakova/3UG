@@ -5,18 +5,19 @@ using UnityEngine;
 public class trident : MonoBehaviour
 {
     public float tridentLifeTime = 0.2f;
-    public GameObject receptorEnemy;
     public int damage = 2;
-    public int tridentSpeed = 30;
+    public int tridentSpeed = 20;
+    int direction = 0;
+    public GameObject attackPoint;
     void Start()
     {
-        receptorEnemy = GameObject.Find("Enemy");
+        attackPoint = GameObject.Find("attackpointSupport");
         Destroy(this.gameObject, tridentLifeTime);
     }
 
 
-    void Update()
+    void FixedUpdate()
     {
-        this.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(tridentSpeed, 0));
+        this.gameObject.GetComponent<Rigidbody2D>().AddForce((this.transform.position - attackPoint.transform.position).normalized * tridentSpeed);
     }
 }

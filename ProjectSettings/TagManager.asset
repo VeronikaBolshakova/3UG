@@ -11,6 +11,7 @@ TagManager:
   - propeller
   - enemy
   - trident
+  - platform
   layers:
   - Default
   - TransparentFX

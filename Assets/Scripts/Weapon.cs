@@ -9,13 +9,21 @@ public class Weapon : MonoBehaviour
     public GameObject bulletPrefab;
     private float bulletCooldownCounter = 2.0f;
     public float bulletCooldown = 2.0f;
+    private bool lClick = false;
+
+    void Update()
+    {
+        GetKey();
+    }
+
     void FixedUpdate()
     {
         bulletCooldownCounter -= Time.deltaTime;
-        if (Input.GetButtonDown("Fire2") && bullet == 1 && bulletCooldownCounter <= 0)
+        if (lClick == true && bullet == 1 && bulletCooldownCounter <= 0)
         {
             Shoot();
             bullet--;
+            lClick = false;
             bulletCooldownCounter = bulletCooldown;
         }
     }
@@ -28,6 +36,12 @@ public class Weapon : MonoBehaviour
         bullet = ammo;
     }
 
-
+    void GetKey()
+    {
+        if (Input.GetButtonDown("Fire2") && bulletCooldownCounter <= 0)
+        {
+            lClick = true;
+        }
+    }
 
 }

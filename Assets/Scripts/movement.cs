@@ -5,15 +5,15 @@ using UnityEngine;
 public class movement : MonoBehaviour
 {
     public static int jump;
-    public int vVectorNoWater = 200;
-    public int vVectorWater = 300;
+    public int vVectorNoWater = 300;
+    public int vVectorWater = 400;
     Vector2 hVectorNoWater = new Vector2(0.2f, 0.0f);
     Vector2 hVectorWater = new Vector2(0.2f, 0.0f);
     Vector2 vVectorWaterPropelled = new Vector2(0.0f, 0.5f);
     public float noWaterDrag = 1.0f;
     public float waterDrag = 3.0f;
     public float hSpeedNoWater = 0.1f;
-    public int numberOfJumps = 2;
+    public int numberOfJumps = 1;
     int movementType = 0;
     bool propeller = false;
 
@@ -27,11 +27,21 @@ public class movement : MonoBehaviour
     private float tridentCooldownCounter = 1.0f;
     public int health = 10;
     public int enemyDamage = 1;
+    private int dir = 0;
+    private bool D = false;
+    private bool A = false;
+    private bool W = false;
+    private bool rClick = false;
 
     void Start()
     {
-        jump = 2;
+        jump = 1;
         player = GetComponent<Rigidbody2D>();
+    }
+
+    void Update()
+    {
+        GetKeys();
     }
 
     void FixedUpdate()
@@ -53,8 +63,9 @@ public class movement : MonoBehaviour
             WaterPropelledMovement(player);
         }
 
-        if (Input.GetButtonDown("Fire1") && tridentCooldownCounter <= 0)
+        if (rClick == true && tridentCooldownCounter <= 0)
         {
+            rClick = false;
             Attack();
             tridentCooldownCounter = tridentCooldown;
         }
@@ -67,7 +78,7 @@ public class movement : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collider)
     {
-        if (collider.gameObject.tag == "floor")
+        if (collider.gameObject.tag == "floor" || collider.gameObject.tag == "platform")
         {
             jump = numberOfJumps;
         }
@@ -129,61 +140,165 @@ public class movement : MonoBehaviour
 
     void NoWaterMovement(Rigidbody2D player)
     {
-        if (Input.GetKey(KeyCode.D))
+        if (D == true)
         {
-            player.AddForce(hVectorNoWater, ForceMode2D.Impulse);
-            transform.Translate(hSpeedNoWater * 0.4f, 0, 0);
+            if (dir == 1)
+            {
+                dir = 0;
+                transform.Rotate(0, 180, 0);
+            }
         }
 
-        if (Input.GetKey(KeyCode.A))
+        if (D == true)
         {
-            player.AddForce(-hVectorNoWater, ForceMode2D.Impulse);
-            transform.Translate(-hSpeedNoWater * 0.4f, 0, 0);
+            
+            if (dir == 0)
+            {
+                D = false;
+                player.AddForce(hVectorNoWater, ForceMode2D.Impulse);
+                transform.Translate(hSpeedNoWater * 0.4f, 0, 0);
+            }
+            else
+            {
+                D = false;
+                player.AddForce(-hVectorNoWater, ForceMode2D.Impulse);
+                transform.Translate(-hSpeedNoWater * 0.4f, 0, 0);
+            }
         }
 
+        if (A == true)
+        {
+            if (dir == 0)
+            {
+                dir = 1;
+                transform.Rotate(0, 180, 0);
+            }
+        }
 
-        if (Input.GetKeyDown(KeyCode.W) && jump > 0)
+        if (A == true)
+        {
+
+            if (dir == 0)
+            {
+                A = false;
+                player.AddForce(hVectorNoWater, ForceMode2D.Impulse);
+                transform.Translate(-hSpeedNoWater * 0.4f, 0, 0);
+            }
+            else
+            {
+                A = false;
+                player.AddForce(-hVectorNoWater, ForceMode2D.Impulse);
+                transform.Translate(hSpeedNoWater * 0.4f, 0, 0);
+            }
+        }
+
+        if (W == true && jump > 0)
         {
             jump--;
+            W = false;
             player.AddForce(new Vector2(0, vVectorNoWater));
         }
     }
 
     void WaterMovement(Rigidbody2D player)
     {
-        if (Input.GetKey(KeyCode.D))
+        if (D == true)
         {
+            if (dir == 1)
+            {
+                dir = 0;
+                transform.Rotate(0, 180, 0);
+            }
+        }
+
+        if (D == true)
+        {
+            D = false;
             player.AddForce(hVectorWater, ForceMode2D.Impulse);
         }
 
-        if (Input.GetKey(KeyCode.A))
+        if (A == true)
         {
+            if (dir == 0)
+            {
+                dir = 1;
+                transform.Rotate(0, 180, 0);
+            }
+        }
+
+        if (A == true)
+        {
+            A = false;
             player.AddForce(-hVectorWater, ForceMode2D.Impulse);
         }
 
 
-        if (Input.GetKeyDown(KeyCode.W) && jump > 0)
+        if (W == true && jump > 0)
         {
             jump--;
+            W = false;
             player.AddForce(new Vector2(0, vVectorWater));
         }
     }
 
     void WaterPropelledMovement(Rigidbody2D player)
     {
-        if (Input.GetKey(KeyCode.D))
+        if (D == true)
         {
+            if (dir == 1)
+            {
+                dir = 0;
+                transform.Rotate(0, 180, 0);
+            }
+        }
+
+        if (D == true)
+        {
+            D = false;
             player.AddForce(hVectorWater, ForceMode2D.Impulse);
         }
 
-        if (Input.GetKey(KeyCode.A))
+        if (A == true)
         {
+            if (dir == 0)
+            {
+                dir = 1;
+                transform.Rotate(0, 180, 0);
+            }
+        }
+
+        if (A == true)
+        {
+            A = false;
             player.AddForce(-hVectorWater, ForceMode2D.Impulse);
         }
 
         if (Input.GetKey(KeyCode.W))
         {
             player.AddForce(vVectorWaterPropelled, ForceMode2D.Impulse);
+        }
+    }
+
+    void GetKeys()
+    {
+        if (Input.GetKey(KeyCode.D))
+        {
+            D = true;
+        }
+
+        if (Input.GetKey(KeyCode.A))
+        {
+            A = true;
+        }
+
+        if (Input.GetKeyDown(KeyCode.W) && jump > 0)
+        {
+            W = true;
+        }
+
+        if (Input.GetButtonDown("Fire1") && tridentCooldownCounter <= 0)
+        {
+            rClick = true;
         }
     }
 }

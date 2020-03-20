@@ -43,6 +43,14 @@ public class Enemy : MonoBehaviour
         {
             health -= tridentDamage;
         }
-    }   
+    }
+
+    void OnCollisionEnter2D(Collision2D collider)
+    {
+        if (collider.gameObject.tag == "platform")
+        {
+            this.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 300));
+        }
+    }
 }
 
