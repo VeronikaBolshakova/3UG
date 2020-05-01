@@ -12,6 +12,7 @@ public class trident : MonoBehaviour
     void Start()
     {
         attackPoint = GameObject.Find("attackpointSupport");
+        FindObjectOfType<AudioManager>().Play("Trident");
         Destroy(this.gameObject, tridentLifeTime);
     }
 

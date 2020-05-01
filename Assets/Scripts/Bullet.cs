@@ -10,6 +10,7 @@ public class Bullet : MonoBehaviour
     public GameObject gun;
     public GameObject firePoint;
     public float lifeTime = 3.0f;
+    private bool pistolSound = true;
     int ammo = 1;
     //public float bulletLifeTime = 2.0f;
     void Start()
@@ -24,11 +25,17 @@ public class Bullet : MonoBehaviour
     void FixedUpdate()
     {
         this.gameObject.GetComponent<Rigidbody2D>().AddForce((player.transform.position - this.transform.position).normalized * bulletBackSpeed);
+
+        if (pistolSound == true) {
+            FindObjectOfType<AudioManager>().Play("Pistol");
+            pistolSound = false;
+        }
         lifeTime -= Time.deltaTime;
         if (lifeTime <= 0)
         {
             Destroy(this.gameObject);
             gun.SendMessage("Ammo", ammo);
+            pistolSound = true;
         }
     }
 }
