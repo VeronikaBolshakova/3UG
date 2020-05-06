@@ -100,6 +100,7 @@ public class movement : MonoBehaviour
         {
             Destroy(collider.gameObject);
             propeller = true;
+            movementType = 2;
         }
     }
 
@@ -194,8 +195,8 @@ public class movement : MonoBehaviour
                 transform.Translate(-hSpeedNoWater * 0.3f, 0, 0);
                 player.AddForce(hVectorNoWater, ForceMode2D.Impulse);
             }
-            {
             else
+            { 
                 A = false;
                 player.AddForce(-hVectorNoWater, ForceMode2D.Impulse);
                 transform.Translate(hSpeedNoWater * 0.3f, 0, 0);
