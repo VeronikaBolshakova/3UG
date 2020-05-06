@@ -12,6 +12,7 @@ TagManager:
   - enemy
   - trident
   - platform
+  - thorns
   layers:
   - Default
   - TransparentFX
@@ -60,4 +61,10 @@ TagManager:
     locked: 0
   - name: Gun
     uniqueID: 1627028089
+    locked: 0
+  - name: Floor
+    uniqueID: 3612519485
+    locked: 0
+  - name: Water
+    uniqueID: 4078092875
     locked: 0

@@ -5,13 +5,15 @@ using UnityEngine;
 public class movement : MonoBehaviour
 {
     public static int jump;
-    public int vVectorNoWater = 300;
-    public int vVectorWater = 400;
+    public int vVectorNoWater = 500;
+    public int vVectorWater = 625;
     Vector2 hVectorNoWater = new Vector2(0.2f, 0.0f);
     Vector2 hVectorWater = new Vector2(0.2f, 0.0f);
     Vector2 vVectorWaterPropelled = new Vector2(0.0f, 0.5f);
     public float noWaterDrag = 1.0f;
-    public float waterDrag = 3.0f;
+    public float waterDrag = 2.5f;
+    public float waterGravity = 1.0f;
+    public float noWaterGravity = 1.5f;
     public float hSpeedNoWater = 0.1f;
     public int numberOfJumps = 1;
     int movementType = 0;
@@ -100,6 +102,7 @@ public class movement : MonoBehaviour
         if (environment.gameObject.tag == "water")
         {
             player.drag = waterDrag;
+            player.gravityScale = waterGravity;
             if (propeller == false)
             {
                 movementType = 1;
@@ -130,6 +133,7 @@ public class movement : MonoBehaviour
         {
             player.drag = noWaterDrag;
             movementType = 0;
+            player.gravityScale = noWaterGravity;
         }
     }
 
@@ -156,13 +160,13 @@ public class movement : MonoBehaviour
             {
                 D = false;
                 player.AddForce(hVectorNoWater, ForceMode2D.Impulse);
-                transform.Translate(hSpeedNoWater * 0.4f, 0, 0);
+                transform.Translate(hSpeedNoWater * 0.3f, 0, 0);
             }
             else
             {
                 D = false;
                 player.AddForce(-hVectorNoWater, ForceMode2D.Impulse);
-                transform.Translate(-hSpeedNoWater * 0.4f, 0, 0);
+                transform.Translate(-hSpeedNoWater * 0.3f, 0, 0);
             }
         }
 
@@ -182,13 +186,13 @@ public class movement : MonoBehaviour
             {
                 A = false;
                 player.AddForce(hVectorNoWater, ForceMode2D.Impulse);
-                transform.Translate(-hSpeedNoWater * 0.4f, 0, 0);
+                transform.Translate(-hSpeedNoWater * 0.3f, 0, 0);
             }
             else
             {
                 A = false;
                 player.AddForce(-hVectorNoWater, ForceMode2D.Impulse);
-                transform.Translate(hSpeedNoWater * 0.4f, 0, 0);
+                transform.Translate(hSpeedNoWater * 0.3f, 0, 0);
             }
         }
 
