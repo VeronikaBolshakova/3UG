@@ -20,6 +20,7 @@ public class movement : MonoBehaviour
     bool propeller = false;
 
     private Rigidbody2D player;
+    private bool propellerSound = false;
     public GameObject gun;
     public int ammo = 1;
     public GameObject tridentPrefab;
@@ -27,6 +28,8 @@ public class movement : MonoBehaviour
     public GameObject Enemy;
     public float tridentCooldown = 1.0f;
     private float tridentCooldownCounter = 1.0f;
+    public float propellerCooldown = 1.0f;
+    private float propellerCooldownCounter = 1.0f;
     public int health = 10;
     public int enemyDamage = 1;
     private int dir = 0;
@@ -49,6 +52,7 @@ public class movement : MonoBehaviour
     void FixedUpdate()
     {
         tridentCooldownCounter -= Time.deltaTime;
+        propellerCooldownCounter -= Time.deltaTime;
 
         if (movementType == 0) // Movement outside water
         {
@@ -72,6 +76,7 @@ public class movement : MonoBehaviour
             tridentCooldownCounter = tridentCooldown;
         }
 
+
         if (health <= 0)
         {
             Destroy(this.gameObject);
@@ -83,6 +88,7 @@ public class movement : MonoBehaviour
         if (collider.gameObject.tag == "floor" || collider.gameObject.tag == "platform")
         {
             jump = numberOfJumps;
+            propellerSound = true;
         }
 
         if (collider.gameObject.tag == "enemy")
@@ -169,8 +175,8 @@ public class movement : MonoBehaviour
                 transform.Translate(-hSpeedNoWater * 0.3f, 0, 0);
             }
         }
-
         if (A == true)
+
         {
             if (dir == 0)
             {
@@ -185,11 +191,11 @@ public class movement : MonoBehaviour
             if (dir == 0)
             {
                 A = false;
-                player.AddForce(hVectorNoWater, ForceMode2D.Impulse);
                 transform.Translate(-hSpeedNoWater * 0.3f, 0, 0);
+                player.AddForce(hVectorNoWater, ForceMode2D.Impulse);
             }
-            else
             {
+            else
                 A = false;
                 player.AddForce(-hVectorNoWater, ForceMode2D.Impulse);
                 transform.Translate(hSpeedNoWater * 0.3f, 0, 0);
@@ -280,6 +286,13 @@ public class movement : MonoBehaviour
         if (Input.GetKey(KeyCode.W))
         {
             player.AddForce(vVectorWaterPropelled, ForceMode2D.Impulse);
+
+            if (propellerSound == true) { 
+                FindObjectOfType<AudioManager>().Play("Jetpack");
+                propellerSound = false;
+
+            }
+
         }
     }
 
