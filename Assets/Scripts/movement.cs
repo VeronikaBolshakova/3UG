@@ -89,6 +89,7 @@ public class movement : MonoBehaviour
         {
             jump = numberOfJumps;
             propellerSound = true;
+            FindObjectOfType<AudioManager>().Play("Landing");
         }
 
         if (collider.gameObject.tag == "enemy")
