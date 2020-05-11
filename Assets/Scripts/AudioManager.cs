@@ -12,9 +12,7 @@ public class AudioManager : MonoBehaviour
         {
             s.source = gameObject.AddComponent<AudioSource>();
             s.source.clip = s.clip;
-
             s.source.volume = s.volume;
-
         }
 
     }
@@ -23,7 +21,6 @@ public class AudioManager : MonoBehaviour
     {
        Sound s = Array.Find(sounds, sounds => sounds.name == name);
         s.source.Play();
-
     }
 
 }

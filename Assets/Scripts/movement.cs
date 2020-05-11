@@ -89,7 +89,6 @@ public class movement : MonoBehaviour
         {
             jump = numberOfJumps;
             propellerSound = true;
-            FindObjectOfType<AudioManager>().Play("Landing");
         }
 
         if (collider.gameObject.tag == "enemy")
@@ -103,6 +102,8 @@ public class movement : MonoBehaviour
             propeller = true;
             movementType = 2;
         }
+
+
     }
 
     void OnTriggerEnter2D(Collider2D environment)
@@ -135,16 +136,17 @@ public class movement : MonoBehaviour
         }
     }
 
+/*
     void OnTriggerExit2D(Collider2D noWater)
     {
-        if (noWater.gameObject.tag == "water")
+         if (noWater.gameObject.tag == "water")
         {
             player.drag = noWaterDrag;
             movementType = 0;
             player.gravityScale = noWaterGravity;
         }
     }
-
+*/
     void Attack()
     {
         Instantiate(tridentPrefab, attackpoint.GetComponent<Transform>());
@@ -287,14 +289,13 @@ public class movement : MonoBehaviour
 
         if (Input.GetKey(KeyCode.W))
         {
-            player.AddForce(vVectorWaterPropelled, ForceMode2D.Impulse);
+
+                player.AddForce(vVectorWaterPropelled, ForceMode2D.Impulse);
 
             if (propellerSound == true) { 
                 FindObjectOfType<AudioManager>().Play("Jetpack");
                 propellerSound = false;
-
             }
-
         }
     }
 
