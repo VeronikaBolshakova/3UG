@@ -4,39 +4,21 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    public int bulletSpeed = 500;
-    public float bulletBackSpeed = 10.0f;
-    public GameObject player;
-    public GameObject gun;
-    public GameObject firePoint;
-    public float lifeTime = 3.0f;
-    private bool pistolSound = true;
-    int ammo = 1;
-    //public float bulletLifeTime = 2.0f;
+    public float bulletSpeed = 20f;
+    public Rigidbody2D rb;
     void Start()
     {
-        player = GameObject.Find("Player");
-        gun = GameObject.Find("Gun");
-        firePoint = GameObject.Find("firepointSupport");
-        this.gameObject.GetComponent<Rigidbody2D>().AddForce((this.transform.position - firePoint.transform.position).normalized * bulletSpeed);
-        //Destroy(this.gameObject, bulletLifeTime);
+        rb.velocity = transform.right * bulletSpeed;
     }
 
-    void FixedUpdate()
+    void OnTriggerEnter2D(Collider2D collider)
     {
-        this.gameObject.GetComponent<Rigidbody2D>().AddForce((player.transform.position - this.transform.position).normalized * bulletBackSpeed);
-
-        if (pistolSound == true) {
-            FindObjectOfType<AudioManager>().Play("Pistol");
-            pistolSound = false;
-        }
-        lifeTime -= Time.deltaTime;
-        if (lifeTime <= 0)
-        {
+        Debug.Log(collider.name);
+        if (collider.gameObject.tag != "water" && collider.name != "Player") {
             Destroy(this.gameObject);
-            gun.SendMessage("Ammo", ammo);
-            pistolSound = true;
         }
+
+        
     }
 }
 

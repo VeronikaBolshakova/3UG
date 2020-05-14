@@ -4,44 +4,23 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
-    int bullet = 1;
     public Transform firepoint;
     public GameObject bulletPrefab;
-    private float bulletCooldownCounter = 2.0f;
-    public float bulletCooldown = 2.0f;
-    private bool lClick = false;
 
     void Update()
     {
-        GetKey();
-    }
-
-    void GetKey()
-    {
-        if (Input.GetButtonDown("Fire2") && bulletCooldownCounter <= 0)
-        {
-            lClick = true;
-        }
-    }
-    void FixedUpdate()
-    {
-        bulletCooldownCounter -= Time.deltaTime;
-        if (lClick == true && bullet == 1 && bulletCooldownCounter <= 0)
+        if (Input.GetButtonDown("Fire2") )
         {
             Shoot();
-            bullet--;
-            lClick = false;
-            bulletCooldownCounter = bulletCooldown;
         }
     }
+
     void Shoot()
     {
-        Instantiate(bulletPrefab, firepoint.GetComponent<Transform>());
+        //FindObjectOfType<AudioManager>().Play("Pistol");
+        Instantiate(bulletPrefab, firepoint.position, firepoint.rotation);
     }
-    void Ammo (int ammo)
-    {
-        bullet = ammo;
-    }
+
 
 
 

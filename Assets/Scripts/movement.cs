@@ -18,7 +18,7 @@ public class movement : MonoBehaviour
     public int numberOfJumps = 1;
     int movementType = 0;
     bool propeller = false;
-
+    public int dir = 0;
     private Rigidbody2D player;
     private bool propellerSound = false;
     public GameObject gun;
@@ -32,7 +32,6 @@ public class movement : MonoBehaviour
     private float propellerCooldownCounter = 1.0f;
     public int health = 10;
     public int enemyDamage = 1;
-    private int dir = 0;
     private bool D = false;
     private bool A = false;
     private bool W = false;
@@ -56,7 +55,7 @@ public class movement : MonoBehaviour
 
         if (movementType == 0) // Movement outside water
         {
-            NoWaterMovement(player); 
+            NoWaterMovement(player);
         }
 
         if (movementType == 1) // Movement inside water
@@ -123,11 +122,6 @@ public class movement : MonoBehaviour
             }
         }
 
-        if (environment.gameObject.tag == "bullet")
-        {
-            Destroy(environment.gameObject);
-            gun.SendMessage("Ammo", ammo);
-        }
 
         if (environment.gameObject.tag == "propeller")
         {
@@ -136,17 +130,17 @@ public class movement : MonoBehaviour
         }
     }
 
-/*
-    void OnTriggerExit2D(Collider2D noWater)
-    {
-         if (noWater.gameObject.tag == "water")
+    /*
+        void OnTriggerExit2D(Collider2D noWater)
         {
-            player.drag = noWaterDrag;
-            movementType = 0;
-            player.gravityScale = noWaterGravity;
+             if (noWater.gameObject.tag == "water")
+            {
+                player.drag = noWaterDrag;
+                movementType = 0;
+                player.gravityScale = noWaterGravity;
+            }
         }
-    }
-*/
+    */
     void Attack()
     {
         Instantiate(tridentPrefab, attackpoint.GetComponent<Transform>());
@@ -165,7 +159,7 @@ public class movement : MonoBehaviour
 
         if (D == true)
         {
-            
+
             if (dir == 0)
             {
                 D = false;
@@ -199,7 +193,7 @@ public class movement : MonoBehaviour
                 player.AddForce(hVectorNoWater, ForceMode2D.Impulse);
             }
             else
-            { 
+            {
                 A = false;
                 player.AddForce(-hVectorNoWater, ForceMode2D.Impulse);
                 transform.Translate(hSpeedNoWater * 0.3f, 0, 0);
@@ -290,9 +284,10 @@ public class movement : MonoBehaviour
         if (Input.GetKey(KeyCode.W))
         {
 
-                player.AddForce(vVectorWaterPropelled, ForceMode2D.Impulse);
+            player.AddForce(vVectorWaterPropelled, ForceMode2D.Impulse);
 
-            if (propellerSound == true) { 
+            if (propellerSound == true)
+            {
                 FindObjectOfType<AudioManager>().Play("Jetpack");
                 propellerSound = false;
             }
