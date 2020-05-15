@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6018508479649813025}
   - component: {fileID: 3215772337748038582}
-  - component: {fileID: 8308788295605641714}
   - component: {fileID: 2874879499386029542}
   - component: {fileID: 8846836697668741891}
+  - component: {fileID: 114276732610664778}
   m_Layer: 0
   m_Name: Trident
   m_TagString: trident
@@ -28,8 +28,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5866869381076971386}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
+  m_LocalPosition: {x: -1.001, y: -0.495, z: 0}
+  m_LocalScale: {x: 0.7902864, y: 0.6773504, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -82,22 +82,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8308788295605641714
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5866869381076971386}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0bf3292dcab6da545ad3713262a950ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tridentLifeTime: 0.2
-  damage: 2
-  tridentSpeed: 20
-  attackPoint: {fileID: 0}
 --- !u!61 &2874879499386029542
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -145,3 +129,15 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &114276732610664778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5866869381076971386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e1fb4afce197da41958364331120d16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

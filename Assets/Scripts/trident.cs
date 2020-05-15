@@ -4,20 +4,28 @@ using UnityEngine;
 
 public class trident : MonoBehaviour
 {
-    public float tridentLifeTime = 0.2f;
+
     public int damage = 2;
     public int tridentSpeed = 20;
-    public GameObject attackPoint;
+    public Transform attackPoint;
+    public GameObject tridentPrefab;
+    private float tridentCooldown = 5.0f;
+    private float currentTime = 0f;
+    private float counterTime = 0f;
 
-    void Start()
+    void Update()
     {
-        attackPoint = GameObject.Find("attackpointSupport");
-        FindObjectOfType<AudioManager>().Play("Trident");
-        Destroy(this.gameObject, tridentLifeTime);
+        currentTime = (float)(Time.time % 60f);
+        if (Input.GetButtonDown("Fire1") && currentTime - counterTime >= tridentCooldown)
+        {
+            Attack();
+            counterTime = currentTime;
+        }
     }
 
-    void FixedUpdate()
+    void Attack()
     {
-        this.gameObject.GetComponent<Rigidbody2D>().AddForce((this.transform.position - attackPoint.transform.position).normalized * tridentSpeed);
+        FindObjectOfType<AudioManager>().Play("Trident");
+        Instantiate(tridentPrefab, attackPoint.position, attackPoint.rotation);
     }
 }

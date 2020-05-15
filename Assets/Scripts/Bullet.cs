@@ -17,8 +17,6 @@ public class Bullet : MonoBehaviour
         if (collider.gameObject.tag != "water" && collider.name != "Player") {
             Destroy(this.gameObject);
         }
-
-        
     }
 }
 

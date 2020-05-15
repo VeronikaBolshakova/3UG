@@ -17,7 +17,7 @@ public class Weapon : MonoBehaviour
 
     void Shoot()
     {
-        //FindObjectOfType<AudioManager>().Play("Pistol");
+        FindObjectOfType<AudioManager>().Play("Pistol");
         Instantiate(bulletPrefab, firepoint.position, firepoint.rotation);
     }
 

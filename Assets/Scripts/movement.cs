@@ -23,11 +23,8 @@ public class movement : MonoBehaviour
     private bool propellerSound = false;
     public GameObject gun;
     public int ammo = 1;
-    public GameObject tridentPrefab;
     public Transform attackpoint;
     public GameObject Enemy;
-    public float tridentCooldown = 1.0f;
-    private float tridentCooldownCounter = 1.0f;
     public float propellerCooldown = 1.0f;
     private float propellerCooldownCounter = 1.0f;
     public int health = 10;
@@ -35,7 +32,8 @@ public class movement : MonoBehaviour
     private bool D = false;
     private bool A = false;
     private bool W = false;
-    private bool rClick = false;
+    private float propellerFuel = 50f;
+
 
     void Start()
     {
@@ -50,7 +48,6 @@ public class movement : MonoBehaviour
 
     void FixedUpdate()
     {
-        tridentCooldownCounter -= Time.deltaTime;
         propellerCooldownCounter -= Time.deltaTime;
 
         if (movementType == 0) // Movement outside water
@@ -68,17 +65,10 @@ public class movement : MonoBehaviour
             WaterPropelledMovement(player);
         }
 
-        if (rClick == true && tridentCooldownCounter <= 0)
-        {
-            rClick = false;
-            Attack();
-            tridentCooldownCounter = tridentCooldown;
-        }
-
-
         if (health <= 0)
         {
-            Destroy(this.gameObject);
+            //Destroy(this.gameObject);
+            FindObjectOfType<DeathScreen>().StartDeathScreen();
         }
     }
 
@@ -88,11 +78,17 @@ public class movement : MonoBehaviour
         {
             jump = numberOfJumps;
             propellerSound = true;
+            propellerFuel = 50f;
         }
 
         if (collider.gameObject.tag == "enemy")
         {
             health -= enemyDamage;
+            FindObjectOfType<AudioManager>().Play("PlayerHit");
+            if (dir == 0)
+                this.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(-100, 0));
+            else
+                this.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(100, 0));
         }
 
         if (collider.gameObject.tag == "propeller")
@@ -141,10 +137,7 @@ public class movement : MonoBehaviour
             }
         }
     */
-    void Attack()
-    {
-        Instantiate(tridentPrefab, attackpoint.GetComponent<Transform>());
-    }
+
 
     void NoWaterMovement(Rigidbody2D player)
     {
@@ -283,11 +276,14 @@ public class movement : MonoBehaviour
 
         if (Input.GetKey(KeyCode.W))
         {
-
-            player.AddForce(vVectorWaterPropelled, ForceMode2D.Impulse);
-
+            if(propellerFuel >= 0f) { 
+                player.AddForce(vVectorWaterPropelled, ForceMode2D.Impulse);
+                propellerFuel--;
+                Debug.Log(propellerFuel);
+            }
             if (propellerSound == true)
             {
+
                 FindObjectOfType<AudioManager>().Play("Jetpack");
                 propellerSound = false;
             }
@@ -309,11 +305,6 @@ public class movement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.W) && jump > 0)
         {
             W = true;
-        }
-
-        if (Input.GetButtonDown("Fire1") && tridentCooldownCounter <= 0)
-        {
-            rClick = true;
         }
     }
 }

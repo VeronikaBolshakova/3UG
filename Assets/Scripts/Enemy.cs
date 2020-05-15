@@ -6,16 +6,14 @@ public class Enemy : MonoBehaviour
 {
     public int health = 10;
     public int bulletDamage = 1;
-    public int tridentDamage = 2;
-    public GameObject gun;
-    private int ammo = 1;
+    public int tridentDamage = 5;
     public float Speed = 4.0f;
     public GameObject player;
     public int enemyDamage = 1;
+    private int dir = 0;
 
     void Start()
     {
-        gun = GameObject.Find("Gun");
         player = GameObject.Find("Player");
     }
 
@@ -23,25 +21,44 @@ public class Enemy : MonoBehaviour
     void FixedUpdate()
     {
         this.gameObject.GetComponent<Rigidbody2D>().AddForce((player.transform.position - this.transform.position).normalized * Speed);
+
+        if (player.transform.position.x < this.transform.position.x) 
+            dir = 1;
+        else
+            dir = 0;
+
         if (health <= 0)
         {
             Destroy(this.gameObject);
         }
     }
 
+
+
     void OnTriggerEnter2D(Collider2D collider)
     {
         if (collider.gameObject.tag == "bullet")
         {
             health -= bulletDamage;
-            Destroy(collider.gameObject);
-            gun.SendMessage("Ammo", ammo);
+            if(dir == 1)
+                this.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(50, 0));
+            else
+                this.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(-50, 0));
+
+            FindObjectOfType<AudioManager>().Play("ZombieHit");
 
         }
 
         if (collider.gameObject.tag == "trident")
         {
             health -= tridentDamage;
+            if(dir == 1)
+                this.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2 (400,0));
+            else
+                this.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(-400, 0));
+
+            FindObjectOfType<AudioManager>().Play("ZombieHit");
+
         }
 
         if (collider.gameObject.tag == "platform")
@@ -65,5 +82,6 @@ public class Enemy : MonoBehaviour
             Speed = 4.5f;
         }
     }
+
 }
 
