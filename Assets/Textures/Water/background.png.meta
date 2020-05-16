@@ -2,7 +2,7 @@ fileFormatVersion: 2
 guid: 0f865dfc96cc6364282ca81cb1c5230b
 TextureImporter:
   fileIDToRecycleName:
-    21300000: background_0
+    21300000: background_100
     21300002: background_1
     21300004: background_2
     21300006: background_3
@@ -178,13 +178,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: background_0
+      name: background_100
       rect:
         serializedVersion: 2
-        x: 0
-        y: 223
-        width: 32
-        height: 32
+        x: 1
+        y: 0
+        width: 287
+        height: 255
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}

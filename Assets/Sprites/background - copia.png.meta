@@ -1,57 +1,57 @@
 fileFormatVersion: 2
-guid: 43c67efca494e2d4295c1bef304d4ab3
+guid: 91eb79c3974f5474dbc1a242f53f3ba7
 TextureImporter:
   fileIDToRecycleName:
-    21300000: background_0
-    21300002: background_1
-    21300004: background_2
-    21300006: background_3
-    21300008: background_water
-    21300010: background_5
-    21300012: background_6
-    21300014: background_7
-    21300016: background_8
-    21300018: background_9
-    21300020: background_10
-    21300022: background_11
-    21300024: background_12
-    21300026: background_13
-    21300028: background_14
-    21300030: background_15
-    21300032: background_16
-    21300034: background_17
-    21300036: background_18
-    21300038: background_19
-    21300040: background_20
-    21300042: background_21
-    21300044: background_22
-    21300046: background_23
-    21300048: background_24
-    21300050: background_25
-    21300052: background_26
-    21300054: background_27
-    21300056: background_28
-    21300058: background_29
-    21300060: background_30
-    21300062: background_31
-    21300064: background_32
-    21300066: background_33
-    21300068: background_34
-    21300070: background_35
-    21300072: background_36
-    21300074: background_37
-    21300076: background_38
-    21300078: background_39
-    21300080: background_40
-    21300082: background_41
-    21300084: background_42
-    21300086: background_43
-    21300088: background_44
-    21300090: background_45
-    21300092: background_46
-    21300094: background_47
-    21300096: background_48
-    21300098: background_49
+    21300000: background - copia_0
+    21300002: background - copia_1
+    21300004: background - copia_2
+    21300006: background - copia_3
+    21300008: background - copia_4
+    21300010: background - copia_5
+    21300012: background - copia_6
+    21300014: background - copia_7
+    21300016: background - copia_8
+    21300018: background - copia_9
+    21300020: background - copia_10
+    21300022: background - copia_11
+    21300024: background - copia_12
+    21300026: background - copia_13
+    21300028: background - copia_14
+    21300030: background - copia_15
+    21300032: background - copia_16
+    21300034: background - copia_17
+    21300036: background - copia_18
+    21300038: background - copia_19
+    21300040: background - copia_20
+    21300042: background - copia_21
+    21300044: background - copia_22
+    21300046: background - copia_23
+    21300048: background - copia_24
+    21300050: background - copia_25
+    21300052: background - copia_26
+    21300054: background - copia_27
+    21300056: background - copia_28
+    21300058: background - copia_29
+    21300060: background - copia_30
+    21300062: background - copia_31
+    21300064: background - copia_32
+    21300066: background - copia_33
+    21300068: background - copia_34
+    21300070: background - copia_35
+    21300072: background - copia_36
+    21300074: background - copia_37
+    21300076: background - copia_38
+    21300078: background - copia_39
+    21300080: background - copia_40
+    21300082: background - copia_41
+    21300084: background - copia_42
+    21300086: background - copia_43
+    21300088: background - copia_44
+    21300090: background - copia_45
+    21300092: background - copia_46
+    21300094: background - copia_47
+    21300096: background - copia_48
+    21300098: background - copia_49
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -90,7 +90,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -134,7 +134,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: background_0
+      name: background - copia_0
       rect:
         serializedVersion: 2
         x: 0
@@ -148,13 +148,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4df75b1419d745c40b9712afb4dd4f53
+      spriteID: d4042cb40df0f6d429911494b8e6cc03
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: background_1
+      name: background - copia_1
       rect:
         serializedVersion: 2
         x: 76
@@ -168,13 +168,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a5559f95cba2ef24c94e4aebf873b934
+      spriteID: dadfc0cfe796d83459c6158570f58004
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: background_2
+      name: background - copia_2
       rect:
         serializedVersion: 2
         x: 152
@@ -188,13 +188,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 338ea4d5d822a6f4c9f1499ac992ef6e
+      spriteID: b8873597f3560124090479e9df10ee23
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: background_3
+      name: background - copia_3
       rect:
         serializedVersion: 2
         x: 228
@@ -208,33 +208,33 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c43d1ca72313a45419611b8a71a183b8
+      spriteID: 67e679f551794bd40941cc91d88db97d
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: background_water
+      name: background - copia_4
       rect:
         serializedVersion: 2
         x: 304
         y: 153.6
         width: 76.8
         height: 38.4
-      alignment: 9
-      pivot: {x: 0.5000007, y: 0.5000003}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8f30b72e88eebc640993a2dd98d3b444
+      spriteID: 7dc3b30f853c0404785358e8fdfb77a0
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: background_5
+      name: background - copia_5
       rect:
         serializedVersion: 2
         x: 380
@@ -248,13 +248,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 455c3be08ca4a9c40846aeac925e1fef
+      spriteID: 9236843f342563641ad2a136199390db
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: background_6
+      name: background - copia_6
       rect:
         serializedVersion: 2
         x: 456
@@ -268,13 +268,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 532a18b489a47ee468a9015597cab9c8
+      spriteID: 2edaee81c9af3604a995a383e159966b
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: background_7
+      name: background - copia_7
       rect:
         serializedVersion: 2
         x: 532
@@ -288,13 +288,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 95936625beb102844bdb5c7ee84c0e08
+      spriteID: a90703a289165e242b085821ebee17c8
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: background_8
+      name: background - copia_8
       rect:
         serializedVersion: 2
         x: 608
@@ -308,13 +308,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cf2ac1bc8c95a3d44b036b647266c7fe
+      spriteID: 5adaa42ab8e45c849a84c2bf3473a805
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: background_9
+      name: background - copia_9
       rect:
         serializedVersion: 2
         x: 684
@@ -328,13 +328,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c24b4c7be849939439c8aba5d0465528
+      spriteID: 06a532dfa7c27d04faba8abd637965be
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: background_10
+      name: background - copia_10
       rect:
         serializedVersion: 2
         x: 0
@@ -348,13 +348,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9d8db5b7d9b18fe46a0af0a37594a5cd
+      spriteID: 7793916b192c4024297a7727f31bdba4
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: background_11
+      name: background - copia_11
       rect:
         serializedVersion: 2
         x: 76
@@ -368,13 +368,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8c29a86d8385f5e4a8a57309a0501eb1
+      spriteID: ff724731f7dd7d447a921ca13298b02a
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: background_12
+      name: background - copia_12
       rect:
         serializedVersion: 2
         x: 152
@@ -388,13 +388,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5cd025570de74bd48b8eee951e351783
+      spriteID: baa6dc77017699446925327a72fa4d53
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: background_13
+      name: background - copia_13
       rect:
         serializedVersion: 2
         x: 228
@@ -408,13 +408,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a7e388c5a98de004f955917fffb503fc
+      spriteID: b754659bc595bb24391d8e10a1b26d38
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: background_14
+      name: background - copia_14
       rect:
         serializedVersion: 2
         x: 304
@@ -428,13 +428,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2604d6af5dc71fc459d232fec816ece2
+      spriteID: 419a92d7f890e344cae88ad54c541eb6
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: background_15
+      name: background - copia_15
       rect:
         serializedVersion: 2
         x: 380
@@ -448,13 +448,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 79f0865e33ab1e041a438f9de51b4059
+      spriteID: a0edb62eb43584f44b27c37fb9a668e6
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: background_16
+      name: background - copia_16
       rect:
         serializedVersion: 2
         x: 456
@@ -468,13 +468,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 48ba794f7bc19964d877fa751af10448
+      spriteID: 82bd8029777256340bd550f10fdfe6d2
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: background_17
+      name: background - copia_17
       rect:
         serializedVersion: 2
         x: 532
@@ -488,13 +488,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c754777c61663c64cbdea00c4510f1fc
+      spriteID: 70eab995ab6829d43b6fd17d5bd66359
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: background_18
+      name: background - copia_18
       rect:
         serializedVersion: 2
         x: 608
@@ -508,13 +508,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8b8437511d99c3d4598f1ad319ba2211
+      spriteID: 081cfcaa5f5cd744e97720ece5028d4c
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: background_19
+      name: background - copia_19
       rect:
         serializedVersion: 2
         x: 684
@@ -528,13 +528,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6888979aad6d9f44f87b71b5ad605087
+      spriteID: 463a69b5237b86b49ba95eaa73dac095
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: background_20
+      name: background - copia_20
       rect:
         serializedVersion: 2
         x: 0
@@ -548,13 +548,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 83fd62d370e254a43aaed9d6b5701082
+      spriteID: e36bb1bff30874147a1f83fc05c38d7a
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: background_21
+      name: background - copia_21
       rect:
         serializedVersion: 2
         x: 76
@@ -568,13 +568,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e21a6ae888ce9b64f9a5167b57c8e43b
+      spriteID: 91981b7e629877e489e9f84b4a9b7986
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: background_22
+      name: background - copia_22
       rect:
         serializedVersion: 2
         x: 152
@@ -588,13 +588,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 58d24fbee6171ad44bd263abd540bac4
+      spriteID: c9ea69beaf1bdb64bbd8c48ed201236e
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: background_23
+      name: background - copia_23
       rect:
         serializedVersion: 2
         x: 228
@@ -608,13 +608,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 86f927126f852974daac85b2758b6b27
+      spriteID: 063b3461e4b88ef4d953ec2a3bdc1b94
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: background_24
+      name: background - copia_24
       rect:
         serializedVersion: 2
         x: 304
@@ -628,13 +628,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7dcaeda0ea5e6894aaec739be27bec39
+      spriteID: 6b5d5c8add741254caad325b18adaeeb
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: background_25
+      name: background - copia_25
       rect:
         serializedVersion: 2
         x: 380
@@ -648,13 +648,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a506250f4a945584489e3703a0ab49c2
+      spriteID: 72754b2a884ea4a47ada6c3b23e1a8aa
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: background_26
+      name: background - copia_26
       rect:
         serializedVersion: 2
         x: 456
@@ -668,13 +668,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fa35064a303121d49bd5740f02210a70
+      spriteID: 049a6ea8119d42d4a9115b86bb6cf745
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: background_27
+      name: background - copia_27
       rect:
         serializedVersion: 2
         x: 532
@@ -688,13 +688,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 67dacd9003aef9243bc4f6ea660f7a29
+      spriteID: d8ca9ac3179943c4b9cb29dbc5203f5c
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: background_28
+      name: background - copia_28
       rect:
         serializedVersion: 2
         x: 608
@@ -708,13 +708,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dab3d6eae2ea88b408ea0d513d81f9a7
+      spriteID: 8c42bc5a607d6f6449cf6b4ebf21aebd
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: background_29
+      name: background - copia_29
       rect:
         serializedVersion: 2
         x: 684
@@ -728,13 +728,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0f7bf2b7ad9151244b772a0b2ce872ed
+      spriteID: 4a55c1099812a7c4783af4537c46e785
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: background_30
+      name: background - copia_30
       rect:
         serializedVersion: 2
         x: 0
@@ -748,13 +748,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f21c217c1a61ddc419ac4b6645451ce9
+      spriteID: 0f2cc4ab788060043963bf3ca3bb646d
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: background_31
+      name: background - copia_31
       rect:
         serializedVersion: 2
         x: 76
@@ -768,13 +768,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 54193f96ed200d349a407b9cfa112f9f
+      spriteID: 87c0ea147f2541d4284cf7978aef973e
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: background_32
+      name: background - copia_32
       rect:
         serializedVersion: 2
         x: 152
@@ -788,13 +788,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 07aaa069f8d17c147bccfd94c7a56e88
+      spriteID: 3c1deffbe59bebd4a89b38f82e026748
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: background_33
+      name: background - copia_33
       rect:
         serializedVersion: 2
         x: 228
@@ -808,13 +808,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a1c77752000c10d49afdd9d0a1355f99
+      spriteID: ea9f766b8cb6e5741a368e44a46539d5
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: background_34
+      name: background - copia_34
       rect:
         serializedVersion: 2
         x: 304
@@ -828,13 +828,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b85f3a127f7d787448a53e499400fc6c
+      spriteID: eb15bc7b3e98deb43b3c6611e5db7beb
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: background_35
+      name: background - copia_35
       rect:
         serializedVersion: 2
         x: 380
@@ -848,13 +848,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c5b4d8ce9691bcf43a2de2e43275aac4
+      spriteID: 764d41699173f5f4f8bdd3493d9f45fe
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: background_36
+      name: background - copia_36
       rect:
         serializedVersion: 2
         x: 456
@@ -868,13 +868,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aa3ced2b3b16e8b47a0d9400474d74a4
+      spriteID: 365af3c0f7cdaac44b44371dbc549480
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: background_37
+      name: background - copia_37
       rect:
         serializedVersion: 2
         x: 532
@@ -888,13 +888,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 87d5a629abc82de4688b955dd029c4c6
+      spriteID: 7fd56f4f1b65c9f4ba0ce269932cfb18
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: background_38
+      name: background - copia_38
       rect:
         serializedVersion: 2
         x: 608
@@ -908,13 +908,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d14b0e8daf9243749ab000e9288d59d4
+      spriteID: c4b6cc545f98288438ee7b7839dc2ad8
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: background_39
+      name: background - copia_39
       rect:
         serializedVersion: 2
         x: 684
@@ -928,13 +928,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 455f81e445134be4196fbaf776613971
+      spriteID: ee8903ed89904f342a89f184e22676f8
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: background_40
+      name: background - copia_40
       rect:
         serializedVersion: 2
         x: 0
@@ -948,13 +948,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 39fcef13cc2ea1a43a9275fbfdb69b83
+      spriteID: 0e737febe20c96a4b958f8870f932230
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: background_41
+      name: background - copia_41
       rect:
         serializedVersion: 2
         x: 76
@@ -968,13 +968,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d0db6e73feb8a7f4093e9fe9d762050d
+      spriteID: 151ffe4872163fa41b1245853ff8c6f2
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: background_42
+      name: background - copia_42
       rect:
         serializedVersion: 2
         x: 152
@@ -988,13 +988,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b576af960f3bf9a4c9e643b0e0f988e8
+      spriteID: 753ea2676529e3241bb386d97eb54182
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: background_43
+      name: background - copia_43
       rect:
         serializedVersion: 2
         x: 228
@@ -1008,13 +1008,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 40a27efdbff0fd0499b76f36acaa5cd8
+      spriteID: 6cb79ece13a7da348a1fd4cb2c04bc8b
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: background_44
+      name: background - copia_44
       rect:
         serializedVersion: 2
         x: 304
@@ -1028,13 +1028,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e118772603e7a6940a0a9427805c3976
+      spriteID: a0eb5e70f67572546b7ba45e2b375b10
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: background_45
+      name: background - copia_45
       rect:
         serializedVersion: 2
         x: 380
@@ -1048,13 +1048,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c04e1333a76b7b246ab05df48c619430
+      spriteID: bdbb00b37bb2a7242b0f4fd219428e5f
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: background_46
+      name: background - copia_46
       rect:
         serializedVersion: 2
         x: 456
@@ -1068,13 +1068,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ab788549d976c0f41ab309c5400b20b7
+      spriteID: 5ab860748579f97468f8f430e23c8d58
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: background_47
+      name: background - copia_47
       rect:
         serializedVersion: 2
         x: 532
@@ -1088,13 +1088,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5c0a6e4c3d0e63e4a863f04417918bfb
+      spriteID: f120c56ce2460a741838fdf52ca98e9d
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: background_48
+      name: background - copia_48
       rect:
         serializedVersion: 2
         x: 608
@@ -1108,13 +1108,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dc0ab140469c6a04799c33d781375f00
+      spriteID: d7f2f480d89cae945bfa1eb452f44eaf
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: background_49
+      name: background - copia_49
       rect:
         serializedVersion: 2
         x: 684
@@ -1128,7 +1128,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f7fa21cfac0b57942b14bc9011d1b33d
+      spriteID: 66df6a33518b79c4d800838ac9c4b315
       vertices: []
       indices: 
       edges: []
@@ -1136,7 +1136,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 3285cf5d905769d47a454b3d2a38a7ad
+    spriteID: a965bd80e05e86344aacbc69e18066d7
     vertices: []
     indices: 
     edges: []
