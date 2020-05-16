@@ -46,21 +46,36 @@ MonoBehaviour:
   sounds:
   - name: Trident
     clip: {fileID: 8300000, guid: b55a7dd9593d6f84f93ebf2558c6abf8, type: 3}
-    volume: 0.354
+    volume: 0.241
     loop: 0
     source: {fileID: 0}
   - name: Jetpack
     clip: {fileID: 8300000, guid: f94abbad8ebb676498e0ec9728f9e66c, type: 3}
-    volume: 0.349
+    volume: 0.041
     loop: 0
     source: {fileID: 0}
   - name: Pistol
     clip: {fileID: 8300000, guid: ee3c47c506c84b14da676f004a69ff04, type: 3}
-    volume: 0.373
+    volume: 0.035
     loop: 0
     source: {fileID: 0}
   - name: Theme
     clip: {fileID: 8300000, guid: 430084cfe48b52d44aa552ef665a9504, type: 3}
-    volume: 0.285
+    volume: 0.312
     loop: 1
+    source: {fileID: 0}
+  - name: PlayerHit
+    clip: {fileID: 8300000, guid: 4c62d5449661f2049be522f90a1c4054, type: 3}
+    volume: 0.312
+    loop: 0
+    source: {fileID: 0}
+  - name: ZombieHit
+    clip: {fileID: 8300000, guid: 30b8fc4893ef8ee49b61aeb30ea0f9ab, type: 3}
+    volume: 0.107
+    loop: 0
+    source: {fileID: 0}
+  - name: ZombieDeath
+    clip: {fileID: 8300000, guid: b7f40da68340e1a4e973b28646b259c8, type: 3}
+    volume: 0.129
+    loop: 0
     source: {fileID: 0}

@@ -30107,6 +30107,85 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &1182409740
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5939202723013050192, guid: 182a1da285a82d24fa429f83eb602221,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 52.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 5939202723013050192, guid: 182a1da285a82d24fa429f83eb602221,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 5939202723013050192, guid: 182a1da285a82d24fa429f83eb602221,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5939202723013050192, guid: 182a1da285a82d24fa429f83eb602221,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5939202723013050192, guid: 182a1da285a82d24fa429f83eb602221,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5939202723013050192, guid: 182a1da285a82d24fa429f83eb602221,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5939202723013050192, guid: 182a1da285a82d24fa429f83eb602221,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5939202723013050192, guid: 182a1da285a82d24fa429f83eb602221,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 33
+      objectReference: {fileID: 0}
+    - target: {fileID: 5939202723013050192, guid: 182a1da285a82d24fa429f83eb602221,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5939202723013050192, guid: 182a1da285a82d24fa429f83eb602221,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5939202723013050192, guid: 182a1da285a82d24fa429f83eb602221,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5939202723013050193, guid: 182a1da285a82d24fa429f83eb602221,
+        type: 3}
+      propertyPath: m_Name
+      value: Enemy 2 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6303658567498509549, guid: 182a1da285a82d24fa429f83eb602221,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6303658567498509549, guid: 182a1da285a82d24fa429f83eb602221,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.8
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 182a1da285a82d24fa429f83eb602221, type: 3}
 --- !u!1 &1188878408
 GameObject:
   m_ObjectHideFlags: 0
@@ -35343,7 +35422,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Resume
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 0}
+  m_fontAsset: {fileID: 11400000, guid: 1076b96c2ed507b468ef5460eceb5076, type: 2}
   m_sharedMaterial: {fileID: 21700968836068756, guid: 1076b96c2ed507b468ef5460eceb5076,
     type: 2}
   m_fontSharedMaterials: []
@@ -37322,7 +37401,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1418959579}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.9405, y: 6.45019, z: -9.8984375}
+  m_LocalPosition: {x: 3.9405, y: 9.51, z: -9.8984375}
   m_LocalScale: {x: 3, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -38513,7 +38592,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1475145711}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.74, y: -1.95, z: -10}
+  m_LocalPosition: {x: -19.26, y: -3.42, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1905716448}
@@ -45890,6 +45969,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 6303658567498509549, guid: 182a1da285a82d24fa429f83eb602221,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 25.79
+      objectReference: {fileID: 0}
+    - target: {fileID: 6303658567498509549, guid: 182a1da285a82d24fa429f83eb602221,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.78
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 182a1da285a82d24fa429f83eb602221, type: 3}
 --- !u!1 &1802364948
@@ -49203,7 +49292,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Quit
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 0}
+  m_fontAsset: {fileID: 11400000, guid: 1076b96c2ed507b468ef5460eceb5076, type: 2}
   m_sharedMaterial: {fileID: 21700968836068756, guid: 1076b96c2ed507b468ef5460eceb5076,
     type: 2}
   m_fontSharedMaterials: []
@@ -50446,7 +50535,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Menu
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 0}
+  m_fontAsset: {fileID: 11400000, guid: 1076b96c2ed507b468ef5460eceb5076, type: 2}
   m_sharedMaterial: {fileID: 21700968836068756, guid: 1076b96c2ed507b468ef5460eceb5076,
     type: 2}
   m_fontSharedMaterials: []
@@ -53604,7 +53693,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2052470825}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.74, y: -1.95, z: 0}
+  m_LocalPosition: {x: -19.26, y: -3.42, z: 0}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children:
   - {fileID: 2112171372}
@@ -55906,23 +55995,28 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4625744340597693714, guid: c89c7ce1a9516ed40ac71c49b9f05d5c,
         type: 3}
+      propertyPath: sounds.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4625744340597693714, guid: c89c7ce1a9516ed40ac71c49b9f05d5c,
+        type: 3}
       propertyPath: sounds.Array.data[5].name
-      value: PlayerHit
+      value: ZombieHit
       objectReference: {fileID: 0}
     - target: {fileID: 4625744340597693714, guid: c89c7ce1a9516ed40ac71c49b9f05d5c,
         type: 3}
       propertyPath: sounds.Array.data[5].clip
       value: 
-      objectReference: {fileID: 8300000, guid: 4c62d5449661f2049be522f90a1c4054, type: 3}
+      objectReference: {fileID: 8300000, guid: 30b8fc4893ef8ee49b61aeb30ea0f9ab, type: 3}
     - target: {fileID: 4625744340597693714, guid: c89c7ce1a9516ed40ac71c49b9f05d5c,
         type: 3}
       propertyPath: sounds.Array.data[5].volume
-      value: 0.138
+      value: 0.071
       objectReference: {fileID: 0}
     - target: {fileID: 4625744340597693714, guid: c89c7ce1a9516ed40ac71c49b9f05d5c,
         type: 3}
       propertyPath: sounds.Array.data[1].volume
-      value: 0.239
+      value: 0.015
       objectReference: {fileID: 0}
     - target: {fileID: 4625744340597693714, guid: c89c7ce1a9516ed40ac71c49b9f05d5c,
         type: 3}
@@ -55932,7 +56026,47 @@ PrefabInstance:
     - target: {fileID: 4625744340597693714, guid: c89c7ce1a9516ed40ac71c49b9f05d5c,
         type: 3}
       propertyPath: sounds.Array.data[2].volume
-      value: 0.092
+      value: 0.021
+      objectReference: {fileID: 0}
+    - target: {fileID: 4625744340597693714, guid: c89c7ce1a9516ed40ac71c49b9f05d5c,
+        type: 3}
+      propertyPath: sounds.Array.data[4].name
+      value: PlayerHit
+      objectReference: {fileID: 0}
+    - target: {fileID: 4625744340597693714, guid: c89c7ce1a9516ed40ac71c49b9f05d5c,
+        type: 3}
+      propertyPath: sounds.Array.data[4].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 4c62d5449661f2049be522f90a1c4054, type: 3}
+    - target: {fileID: 4625744340597693714, guid: c89c7ce1a9516ed40ac71c49b9f05d5c,
+        type: 3}
+      propertyPath: sounds.Array.data[4].volume
+      value: 0.186
+      objectReference: {fileID: 0}
+    - target: {fileID: 4625744340597693714, guid: c89c7ce1a9516ed40ac71c49b9f05d5c,
+        type: 3}
+      propertyPath: sounds.Array.data[4].loop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4625744340597693714, guid: c89c7ce1a9516ed40ac71c49b9f05d5c,
+        type: 3}
+      propertyPath: sounds.Array.data[5].loop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4625744340597693714, guid: c89c7ce1a9516ed40ac71c49b9f05d5c,
+        type: 3}
+      propertyPath: sounds.Array.data[6].name
+      value: ZombieDeath
+      objectReference: {fileID: 0}
+    - target: {fileID: 4625744340597693714, guid: c89c7ce1a9516ed40ac71c49b9f05d5c,
+        type: 3}
+      propertyPath: sounds.Array.data[6].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: b7f40da68340e1a4e973b28646b259c8, type: 3}
+    - target: {fileID: 4625744340597693714, guid: c89c7ce1a9516ed40ac71c49b9f05d5c,
+        type: 3}
+      propertyPath: sounds.Array.data[6].volume
+      value: 0.071
       objectReference: {fileID: 0}
     - target: {fileID: 4625744340597693715, guid: c89c7ce1a9516ed40ac71c49b9f05d5c,
         type: 3}

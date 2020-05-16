@@ -20,7 +20,8 @@ public class Enemy : MonoBehaviour
 
     void FixedUpdate()
     {
-        this.gameObject.GetComponent<Rigidbody2D>().AddForce((player.transform.position - this.transform.position).normalized * Speed);
+            this.gameObject.GetComponent<Rigidbody2D>().AddForce((player.transform.position - this.transform.position).normalized * Speed);
+
 
         if (player.transform.position.x < this.transform.position.x) 
             dir = 1;
@@ -30,6 +31,7 @@ public class Enemy : MonoBehaviour
         if (health <= 0)
         {
             Destroy(this.gameObject);
+            FindObjectOfType<AudioManager>().Play("ZombieDeath");
         }
     }
 
