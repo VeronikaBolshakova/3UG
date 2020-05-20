@@ -16,7 +16,7 @@ public class trident : MonoBehaviour
     void Update()
     {
         currentTime = (float)(Time.time % 60f);
-        if (Input.GetButtonDown("Fire1") && currentTime - counterTime >= tridentCooldown)
+        if (Input.GetButtonDown("Fire1") && currentTime - counterTime > tridentCooldown)
         {
             Attack();
             counterTime = currentTime;
