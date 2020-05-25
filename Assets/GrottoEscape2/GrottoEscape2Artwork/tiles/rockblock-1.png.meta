@@ -1,7 +1,14 @@
 fileFormatVersion: 2
 guid: 1a5f0922172f142f4b1f5b5b94c4f221
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: rockblock-1_0
+    21300002: rockblock-1_1
+    21300004: rockblock-1_2
+    21300006: rockblock-1_3
+    21300008: rockblock-1_4
+    21300010: rockblock-1_5
+    21300012: rockblock-1_6
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -40,11 +47,11 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 0
   spriteMeshType: 1
   alignment: 1
-  spritePivot: {x: 0.5, y: 0.5}
+  spritePivot: {x: 0, y: 1}
   spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
@@ -82,7 +89,147 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: rockblock-1_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 13.714286
+        width: 16
+        height: 2.2857144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40c726acaf5af4e4c907b8394083f718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockblock-1_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 11.714286
+        width: 16
+        height: 2.2857144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0bf27d5976622148925a7ac0cc25644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockblock-1_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 9.714286
+        width: 16
+        height: 2.2857144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba3e42c4ce80e3443b7ee1bf6f623dc0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockblock-1_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7.714286
+        width: 16
+        height: 2.2857144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df5564f4839bf884fa54f1a4766665db
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockblock-1_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5.714286
+        width: 16
+        height: 2.2857144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8338c28f6e2b96046b62d62c126ef6e9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockblock-1_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3.7142856
+        width: 16
+        height: 2.2857144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47dfa527b87555949afdf2ba168563c7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockblock-1_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1.7142856
+        width: 16
+        height: 2.2857144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f752fb71236cc5e4dbacf6dae172c987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
