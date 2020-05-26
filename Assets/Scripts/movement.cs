@@ -33,12 +33,14 @@ public class movement : MonoBehaviour
     private bool A = false;
     private bool W = false;
     private float propellerFuel = 50f;
+    public HealthBar healthbar;
 
 
     void Start()
     {
         jump = 1;
         player = GetComponent<Rigidbody2D>();
+        healthbar.SetMaxHealth(health);
     }
 
     void Update()
@@ -84,6 +86,7 @@ public class movement : MonoBehaviour
         if (collider.gameObject.tag == "enemy")
         {
             health -= enemyDamage;
+            healthbar.SetHealth(health);
             FindObjectOfType<AudioManager>().Play("PlayerHit");
             if (dir == 0)
                 this.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(-100, 0));
