@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class Enemy : MonoBehaviour
 {
     public int health = 10;
@@ -11,6 +12,8 @@ public class Enemy : MonoBehaviour
     public GameObject player;
     public int enemyDamage = 1;
     private int dir = 0;
+    public HealthBar healthBar;
+
 
     void Start()
     {
@@ -84,6 +87,7 @@ public class Enemy : MonoBehaviour
             Speed = 4.5f;
         }
     }
+
 
 }
 
