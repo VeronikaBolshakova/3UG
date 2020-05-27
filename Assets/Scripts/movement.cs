@@ -5,7 +5,7 @@ using UnityEngine;
 public class movement : MonoBehaviour
 {
     public static int jump;
-    public int vVectorNoWater = 500;
+    public int vVectorNoWater = 400;
     public int vVectorWater = 625;
     Vector2 hVectorNoWater = new Vector2(0.2f, 0.0f);
     Vector2 hVectorWater = new Vector2(0.2f, 0.0f);
@@ -13,7 +13,7 @@ public class movement : MonoBehaviour
     public float noWaterDrag = 1.0f;
     public float waterDrag = 2.5f;
     public float waterGravity = 1.0f;
-    public float noWaterGravity = 1.5f;
+    public float noWaterGravity = 2.0f;
     public float hSpeedNoWater = 0.1f;
     public int numberOfJumps = 1;
     int movementType = 0;
