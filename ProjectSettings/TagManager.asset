@@ -13,6 +13,7 @@ TagManager:
   - trident
   - platform
   - thorns
+  - Lab
   layers:
   - Default
   - TransparentFX

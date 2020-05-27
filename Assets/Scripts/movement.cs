@@ -34,6 +34,7 @@ public class movement : MonoBehaviour
     private bool W = false;
     private float propellerFuel = 50f;
     public HealthBar healthbar;
+    public PropellerBar propellerbar;
 
 
     void Start()
@@ -46,6 +47,7 @@ public class movement : MonoBehaviour
     void Update()
     {
         GetKeys();
+
     }
 
     void FixedUpdate()
@@ -65,6 +67,7 @@ public class movement : MonoBehaviour
         if (movementType == 2) // Movement inside water + propeller
         {
             WaterPropelledMovement(player);
+            propellerbar.Activate();
         }
 
         if (health <= 0)
@@ -81,6 +84,7 @@ public class movement : MonoBehaviour
             jump = numberOfJumps;
             propellerSound = true;
             propellerFuel = 50f;
+            propellerbar.SetPropellerSlider(propellerFuel);
         }
 
         if (collider.gameObject.tag == "enemy")
@@ -101,11 +105,11 @@ public class movement : MonoBehaviour
             movementType = 2;
         }
 
-
     }
 
     void OnTriggerEnter2D(Collider2D environment)
     {
+       
         if (environment.gameObject.tag == "water")
         {
             player.drag = waterDrag;
@@ -121,6 +125,12 @@ public class movement : MonoBehaviour
             }
         }
 
+        if (environment.gameObject.tag == "Lab")
+        {
+            player.drag = noWaterDrag;
+            movementType = 0;
+            player.gravityScale = noWaterGravity;
+        }
 
         if (environment.gameObject.tag == "propeller")
         {
@@ -129,7 +139,7 @@ public class movement : MonoBehaviour
         }
     }
 
-    /*
+ /*   
         void OnTriggerExit2D(Collider2D noWater)
         {
              if (noWater.gameObject.tag == "water")
@@ -139,8 +149,8 @@ public class movement : MonoBehaviour
                 player.gravityScale = noWaterGravity;
             }
         }
-    */
-
+    
+*/
 
     void NoWaterMovement(Rigidbody2D player)
     {
@@ -282,6 +292,7 @@ public class movement : MonoBehaviour
             if(propellerFuel >= 0f) { 
                 player.AddForce(vVectorWaterPropelled, ForceMode2D.Impulse);
                 propellerFuel--;
+                propellerbar.SetPropellerSlider(propellerFuel);
                 Debug.Log(propellerFuel);
             }
             if (propellerSound == true)
