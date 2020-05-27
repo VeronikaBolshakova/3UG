@@ -12,12 +12,13 @@ public class Enemy : MonoBehaviour
     public GameObject player;
     public int enemyDamage = 1;
     private int dir = 0;
-    public HealthBar healthBar;
+    public EnemyHealthBar enemyHealthBar;
 
 
     void Start()
     {
         player = GameObject.Find("Player");
+        enemyHealthBar.SetMaxEnemyHealth(health);
     }
 
 
@@ -45,25 +46,27 @@ public class Enemy : MonoBehaviour
         if (collider.gameObject.tag == "bullet")
         {
             health -= bulletDamage;
-            if(dir == 1)
+
+            if (dir == 1)
                 this.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(50, 0));
             else
                 this.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(-50, 0));
 
             FindObjectOfType<AudioManager>().Play("ZombieHit");
-
+            enemyHealthBar.SetEnemyHealth(health);
         }
 
         if (collider.gameObject.tag == "trident")
         {
             health -= tridentDamage;
-            if(dir == 1)
+
+            if (dir == 1)
                 this.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2 (400,0));
             else
                 this.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(-400, 0));
 
             FindObjectOfType<AudioManager>().Play("ZombieHit");
-
+            enemyHealthBar.SetEnemyHealth(health);
         }
 
         if (collider.gameObject.tag == "platform")
@@ -83,6 +86,10 @@ public class Enemy : MonoBehaviour
     void OnCollisionEnter2D(Collision2D collider)
     {
         if (collider.gameObject.tag == "floor")
+        {
+            Speed = 4.5f;
+        }
+        if (collider.gameObject.tag == "thorns")
         {
             Speed = 4.5f;
         }
