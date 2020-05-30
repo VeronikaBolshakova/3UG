@@ -27,16 +27,20 @@ public class Enemy : MonoBehaviour
             this.gameObject.GetComponent<Rigidbody2D>().AddForce((player.transform.position - this.transform.position).normalized * Speed);
 
 
-        if (player.transform.position.x < this.transform.position.x) 
+        if (player.transform.position.x <= this.transform.position.x) {
+            this.gameObject.transform.Rotate(0, 0, 0);
             dir = 1;
-        else
+        }
+        else if (player.transform.position.x >= this.transform.position.x) { 
             dir = 0;
-
+            this.gameObject.transform.Rotate(0, 180, 0);
+        }
         if (health <= 0)
         {
             Destroy(this.gameObject);
             FindObjectOfType<AudioManager>().Play("ZombieDeath");
         }
+
     }
 
 

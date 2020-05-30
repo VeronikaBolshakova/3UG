@@ -5,7 +5,7 @@ using UnityEngine;
 public class movement : MonoBehaviour
 {
     public static int jump;
-    public int vVectorNoWater = 400;
+    public int vVectorNoWater = 300;
     public int vVectorWater = 625;
     Vector2 hVectorNoWater = new Vector2(0.2f, 0.0f);
     Vector2 hVectorWater = new Vector2(0.2f, 0.0f);
