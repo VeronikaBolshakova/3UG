@@ -1,15 +1,15 @@
 fileFormatVersion: 2
-guid: 7602687de06bf9540bf70ac3c021f2e0
+guid: a16df0e99ebc33a48951ea37e9cd337e
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Player_Run_0
-    21300002: Player_Run_1
-    21300004: Player_Run_2
-    21300006: Player_Run_3
-    21300008: Player_Run_4
-    21300010: Player_Run_5
-    21300012: Player_Run_6
-    21300014: Player_Run_7
+    21300000: Player_Run - copia_0
+    21300002: Player_Run - copia_1
+    21300004: Player_Run - copia_2
+    21300006: Player_Run - copia_3
+    21300008: Player_Run - copia_4
+    21300010: Player_Run - copia_5
+    21300012: Player_Run - copia_6
+    21300014: Player_Run - copia_7
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -92,7 +92,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Player_Run_0
+      name: Player_Run - copia_0
       rect:
         serializedVersion: 2
         x: 0
@@ -106,13 +106,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b3b04a1fa646a5e45adc9801a4c1df17
+      spriteID: 8915ec1325b530f408bd5d8307a8dfcc
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_Run_1
+      name: Player_Run - copia_1
       rect:
         serializedVersion: 2
         x: 0
@@ -126,13 +126,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5221ff4ec0938cb4195e802481fe883c
+      spriteID: 5d8a7f72e6c504e43a4e789def1a563b
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_Run_2
+      name: Player_Run - copia_2
       rect:
         serializedVersion: 2
         x: 0
@@ -146,13 +146,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a21669ab6aa3b2b4db3ef32a7b8091f8
+      spriteID: a88af2df5926f154ebcf7d78eebf0036
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_Run_3
+      name: Player_Run - copia_3
       rect:
         serializedVersion: 2
         x: 0
@@ -166,13 +166,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b11c24e6a0799a046ab9567708782249
+      spriteID: d801097408761204d96c1297151fad42
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_Run_4
+      name: Player_Run - copia_4
       rect:
         serializedVersion: 2
         x: 0
@@ -186,13 +186,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5e49b41d0d483294cad3d825823ca027
+      spriteID: f931365ad421ede428aca13697f6b6af
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_Run_5
+      name: Player_Run - copia_5
       rect:
         serializedVersion: 2
         x: 0
@@ -206,13 +206,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 89c5ce53dac9e0741b1214f4f7dd8214
+      spriteID: b74f7ff55af84c54a8ec9605f2e83831
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_Run_6
+      name: Player_Run - copia_6
       rect:
         serializedVersion: 2
         x: 0
@@ -226,13 +226,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 35c3944288b58f64e9cfeae16568d3c7
+      spriteID: 441ed9a754172af4f8b12a3e675d2251
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_Run_7
+      name: Player_Run - copia_7
       rect:
         serializedVersion: 2
         x: 0
@@ -246,7 +246,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b39616a0cb662f641aa2324069255b6a
+      spriteID: f2a0ea225eef3e845aa2c76adc7bcc80
       vertices: []
       indices: 
       edges: []
@@ -254,7 +254,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 64bbcbc52ef1ea545aff7f87b08c64af
+    spriteID: 0dcd97d303284144d9a2d6e6873b50cb
     vertices: []
     indices: 
     edges: []
