@@ -28,6 +28,7 @@ public class movement : MonoBehaviour
     public float propellerCooldown = 1.0f;
     private float propellerCooldownCounter = 1.0f;
     public int health = 10;
+    private int maxHealth = 10;
     public int enemyDamage = 1;
     private bool D = false;
     private bool A = false;
@@ -35,6 +36,7 @@ public class movement : MonoBehaviour
     private float propellerFuel = 50f;
     public HealthBar healthbar;
     public PropellerBar propellerbar;
+    public HealthUI healthUI;
 
 
     void Start()
@@ -139,18 +141,6 @@ public class movement : MonoBehaviour
         }
     }
 
- /*   
-        void OnTriggerExit2D(Collider2D noWater)
-        {
-             if (noWater.gameObject.tag == "water")
-            {
-                player.drag = noWaterDrag;
-                movementType = 0;
-                player.gravityScale = noWaterGravity;
-            }
-        }
-    
-*/
 
     void NoWaterMovement(Rigidbody2D player)
     {
@@ -320,5 +310,16 @@ public class movement : MonoBehaviour
         {
             W = true;
         }
+    }
+
+    public void AddHealth(int cure)
+    {
+        health += cure;
+        if(health >= maxHealth)
+        {
+            health = maxHealth; 
+        }
+        healthbar.SetHealth(health);
+        FindObjectOfType<AudioManager>().Play("Healing");
     }
 }

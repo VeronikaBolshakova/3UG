@@ -11,10 +11,15 @@ public class trident : MonoBehaviour
     public GameObject tridentPrefab;
     private float timer = 0.0f;
     public TridentUI tridentUI;
-    int seconds = 0;
-    float counter = 0.0f;
-    int currentSeconds = 0;
+    private int seconds = 0;
+    private float counter = 0.0f;
+    private int currentSeconds = 0;
     public float tridentCooldown = 5.0f;
+
+    void Start()
+    {
+        counter = tridentCooldown;
+    }
 
 
     void Update()
