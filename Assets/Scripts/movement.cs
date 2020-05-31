@@ -37,6 +37,8 @@ public class movement : MonoBehaviour
     public HealthBar healthbar;
     public PropellerBar propellerbar;
     public HealthUI healthUI;
+    public Animator animator;
+    public bool ismoving = false;
 
 
     void Start()
@@ -44,6 +46,8 @@ public class movement : MonoBehaviour
         jump = 1;
         player = GetComponent<Rigidbody2D>();
         healthbar.SetMaxHealth(health);
+        animator.SetBool("Moving", ismoving);
+
     }
 
     void Update()
@@ -144,12 +148,16 @@ public class movement : MonoBehaviour
 
     void NoWaterMovement(Rigidbody2D player)
     {
+        
+
         if (D == true)
         {
+            
             if (dir == 1)
             {
                 dir = 0;
                 transform.Rotate(0, 180, 0);
+ 
             }
         }
 
@@ -161,14 +169,22 @@ public class movement : MonoBehaviour
                 D = false;
                 player.AddForce(hVectorNoWater, ForceMode2D.Impulse);
                 transform.Translate(hSpeedNoWater * 0.3f, 0, 0);
+               
             }
             else
             {
                 D = false;
                 player.AddForce(-hVectorNoWater, ForceMode2D.Impulse);
                 transform.Translate(-hSpeedNoWater * 0.3f, 0, 0);
+                
             }
         }
+
+        if(D == false)
+        {
+            animator.SetBool("Moving", false);
+        }
+
         if (A == true)
 
         {
@@ -176,6 +192,7 @@ public class movement : MonoBehaviour
             {
                 dir = 1;
                 transform.Rotate(0, 180, 0);
+                
             }
         }
 
@@ -187,13 +204,19 @@ public class movement : MonoBehaviour
                 A = false;
                 transform.Translate(-hSpeedNoWater * 0.3f, 0, 0);
                 player.AddForce(hVectorNoWater, ForceMode2D.Impulse);
+                
             }
             else
             {
                 A = false;
                 player.AddForce(-hVectorNoWater, ForceMode2D.Impulse);
                 transform.Translate(hSpeedNoWater * 0.3f, 0, 0);
+                
             }
+        }
+        if (A == false)
+        {
+            animator.SetBool("Moving", false);
         }
 
         if (W == true && jump > 0)
@@ -201,17 +224,25 @@ public class movement : MonoBehaviour
             jump--;
             W = false;
             player.AddForce(new Vector2(0, vVectorNoWater));
+            
+        }
+        if (W == false)
+        {
+            animator.SetBool("Moving", false);
         }
     }
 
     void WaterMovement(Rigidbody2D player)
     {
+        
+
         if (D == true)
         {
             if (dir == 1)
             {
                 dir = 0;
                 transform.Rotate(0, 180, 0);
+               
             }
         }
 
@@ -219,6 +250,12 @@ public class movement : MonoBehaviour
         {
             D = false;
             player.AddForce(hVectorWater, ForceMode2D.Impulse);
+            
+        }
+
+        if (D == false)
+        {
+            animator.SetBool("Moving", false);
         }
 
         if (A == true)
@@ -227,6 +264,7 @@ public class movement : MonoBehaviour
             {
                 dir = 1;
                 transform.Rotate(0, 180, 0);
+                
             }
         }
 
@@ -234,25 +272,39 @@ public class movement : MonoBehaviour
         {
             A = false;
             player.AddForce(-hVectorWater, ForceMode2D.Impulse);
+            
         }
 
+        if (A == false)
+        {
+            animator.SetBool("Moving", false);
+        }
 
         if (W == true && jump > 0)
         {
             jump--;
             W = false;
             player.AddForce(new Vector2(0, vVectorWater));
+            
+        }
+
+        if (W == false)
+        {
+            animator.SetBool("Moving", false);
         }
     }
 
     void WaterPropelledMovement(Rigidbody2D player)
     {
+        
+
         if (D == true)
         {
             if (dir == 1)
             {
                 dir = 0;
                 transform.Rotate(0, 180, 0);
+                
             }
         }
 
@@ -260,6 +312,12 @@ public class movement : MonoBehaviour
         {
             D = false;
             player.AddForce(hVectorWater, ForceMode2D.Impulse);
+            
+        }
+
+        if (D == false)
+        {
+            animator.SetBool("Moving", false);
         }
 
         if (A == true)
@@ -268,6 +326,7 @@ public class movement : MonoBehaviour
             {
                 dir = 1;
                 transform.Rotate(0, 180, 0);
+                
             }
         }
 
@@ -275,6 +334,12 @@ public class movement : MonoBehaviour
         {
             A = false;
             player.AddForce(-hVectorWater, ForceMode2D.Impulse);
+            
+        }
+
+        if (A == false)
+        {
+            animator.SetBool("Moving", false);
         }
 
         if (Input.GetKey(KeyCode.W))
@@ -299,17 +364,22 @@ public class movement : MonoBehaviour
         if (Input.GetKey(KeyCode.D))
         {
             D = true;
+            animator.SetBool("Moving", true);
         }
-
+       
         if (Input.GetKey(KeyCode.A))
         {
             A = true;
+            animator.SetBool("Moving", true);
+            
         }
-
+       
         if (Input.GetKeyDown(KeyCode.W) && jump > 0)
         {
             W = true;
+            animator.SetBool("Moving", true);
         }
+        
     }
 
     public void AddHealth(int cure)

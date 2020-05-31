@@ -1,11 +1,15 @@
 fileFormatVersion: 2
-guid: 0c5f4fbb3ae835a4a9ed24668ae3acf3
+guid: 658e6e683d44fe44999fb2d6b3812b32
 TextureImporter:
   fileIDToRecycleName:
-    21300000: boss_0
-    21300002: boss_1
-    21300004: boss_2
-    21300006: boss_3
+    21300000: Player_Run (1)_0
+    21300002: Player_Run (1)_1
+    21300004: Player_Run (1)_2
+    21300006: Player_Run (1)_3
+    21300008: Player_Run (1)_4
+    21300010: Player_Run (1)_5
+    21300012: Player_Run (1)_6
+    21300014: Player_Run (1)_7
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -88,12 +92,92 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: boss_0
+      name: Player_Run (1)_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2240
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e11fd8f21de946547976029a5cbf581c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Run (1)_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1920
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b020706c10e1dfd459d87a51e4e577a2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Run (1)_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1600
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd6d084b82d5f794394d00272f7f074b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Run (1)_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1280
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a02570e18a7ad5442829a69332ea8293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Run (1)_4
       rect:
         serializedVersion: 2
         x: 0
         y: 960
-        width: 640
+        width: 320
         height: 320
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -102,18 +186,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f5b7fbed470e95745878e7e248de32b3
+      spriteID: b0a0563633a98094e89bfa248dee5a81
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: boss_1
+      name: Player_Run (1)_5
       rect:
         serializedVersion: 2
         x: 0
         y: 640
-        width: 640
+        width: 320
         height: 320
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -122,18 +206,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e8eb1d9935ca5bc4dbd8bab8aaacf8cc
+      spriteID: dde6cd3e6b491bb488b93c4247e15c67
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: boss_2
+      name: Player_Run (1)_6
       rect:
         serializedVersion: 2
         x: 0
         y: 320
-        width: 640
+        width: 320
         height: 320
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -142,18 +226,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9862f65edd8d90c4b89d95232e9ccf58
+      spriteID: 6ac48ff72bdd95b44af074c3126ebae3
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: boss_3
+      name: Player_Run (1)_7
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 640
+        width: 320
         height: 320
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -162,7 +246,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d6d334702b9cbb54583d3196e2b9849f
+      spriteID: 9d9d5ba7367ce3b43ab2af7ffe165ca2
       vertices: []
       indices: 
       edges: []
@@ -170,7 +254,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 60205c158b2ca4545b8bc3073fc4cdc1
+    spriteID: de12f392a881b7d418511ae31b61a8ee
     vertices: []
     indices: 
     edges: []
