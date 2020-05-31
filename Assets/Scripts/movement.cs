@@ -85,7 +85,7 @@ public class movement : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collider)
     {
-        if (collider.gameObject.tag == "floor" || collider.gameObject.tag == "platform")
+        if (collider.gameObject.tag == "floor" || collider.gameObject.tag == "platform" || collider.gameObject.tag == "thorns")
         {
             jump = numberOfJumps;
             propellerSound = true;

@@ -8,10 +8,11 @@ public class HealthUI : MonoBehaviour
 {
     public Image health;
     private float maxValue = 10.0f;
+    private Color color;
 
     public void SetTransparency(float transparency)
     {
-        Color color = health.color;
+        color = health.color;
         color.a = transparency / maxValue;
         health.color = color;
     }
