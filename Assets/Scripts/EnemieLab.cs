@@ -44,9 +44,9 @@ public class EnemieLab : MonoBehaviour
             Destroy(this.gameObject);
             FindObjectOfType<AudioManager>().Play("RobotDeath");
         }
-        if (player.transform.position.y >= this.transform.position.y)
+        if (player.transform.position.y >= this.transform.position.y - 0.5f)
         {
-            this.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 350));
+            this.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 200));
         }
 
             FlipSprite();
