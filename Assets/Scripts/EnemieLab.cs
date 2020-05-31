@@ -24,7 +24,7 @@ public class EnemieLab : MonoBehaviour
     {
         if (player.transform.position.x <= this.transform.position.x)
         {
-            if (this.transform.position.x - player.transform.position.x <= 8)
+            if (this.transform.position.x - player.transform.position.x <= 4)
             {
                 this.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(-3, 0));
                 dir = 1;
@@ -32,7 +32,7 @@ public class EnemieLab : MonoBehaviour
         }
         else if (player.transform.position.x >= this.transform.position.x)
         {
-            if (player.transform.position.x - this.transform.position.x <= 8)
+            if (player.transform.position.x - this.transform.position.x <= 4)
             {
                 dir = 0;
                 this.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(3, 0));

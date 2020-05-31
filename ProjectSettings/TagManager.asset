@@ -23,7 +23,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - Door
   - 
   - 
   - 
@@ -53,6 +53,9 @@ TagManager:
     locked: 0
   - name: Background
     uniqueID: 1012580517
+    locked: 0
+  - name: Door
+    uniqueID: 2114776035
     locked: 0
   - name: Platform
     uniqueID: 863759233
