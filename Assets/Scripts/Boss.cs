@@ -29,6 +29,7 @@ public class Boss : MonoBehaviour
             {
                 this.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(-5, 0));
                 dir = 1;
+                FindObjectOfType<AudioManager>().Play("MonsterGrowl");
             }
         }
         else if (player.transform.position.x >= this.transform.position.x)
@@ -43,10 +44,9 @@ public class Boss : MonoBehaviour
         if (health <= 0)
         {
             Destroy(this.gameObject);
-            FindObjectOfType<AudioManager>().Play("ZombieDeath");
+            FindObjectOfType<AudioManager>().Play("MonsterDeath");
         }
         FlipSprite();
-
     }
 
     void OnTriggerEnter2D(Collider2D collider)
@@ -60,7 +60,7 @@ public class Boss : MonoBehaviour
             else
                 this.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(-50, 0));
 
-            FindObjectOfType<AudioManager>().Play("ZombieHit");
+            FindObjectOfType<AudioManager>().Play("MonsterHit");
             bossHealthBar.SetEnemyHealth(health);
         }
 
@@ -73,7 +73,7 @@ public class Boss : MonoBehaviour
             else
                 this.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(-400, 0));
 
-            FindObjectOfType<AudioManager>().Play("ZombieHit");
+            FindObjectOfType<AudioManager>().Play("MonsterHit");
             bossHealthBar.SetEnemyHealth(health);
         }
 

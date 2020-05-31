@@ -7,12 +7,16 @@ public class Lift : MonoBehaviour
     public Animator animator;
     public GameObject player;
 
-    void OnCollisionEnter2D(Collision2D collider)
+    void Update()
     {
-        //player = GameObject.Find("Player");
-        if (collider.gameObject.tag == "Player")
+        
+        if (this.transform.position.y < player.transform.position.y && player.transform.position.x - this.transform.position.x < 5)
         {
             animator.SetBool("UpLift", true);
         }
+        
+
+
     }
+
 }

@@ -3387,7 +3387,7 @@ PrefabInstance:
     - target: {fileID: 4625744340597693714, guid: c89c7ce1a9516ed40ac71c49b9f05d5c,
         type: 3}
       propertyPath: sounds.Array.size
-      value: 12
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 4625744340597693714, guid: c89c7ce1a9516ed40ac71c49b9f05d5c,
         type: 3}
@@ -3581,6 +3581,51 @@ PrefabInstance:
     - target: {fileID: 4625744340597693714, guid: c89c7ce1a9516ed40ac71c49b9f05d5c,
         type: 3}
       propertyPath: sounds.Array.data[11].volume
+      value: 0.062
+      objectReference: {fileID: 0}
+    - target: {fileID: 4625744340597693714, guid: c89c7ce1a9516ed40ac71c49b9f05d5c,
+        type: 3}
+      propertyPath: sounds.Array.data[12].name
+      value: MonterDeath
+      objectReference: {fileID: 0}
+    - target: {fileID: 4625744340597693714, guid: c89c7ce1a9516ed40ac71c49b9f05d5c,
+        type: 3}
+      propertyPath: sounds.Array.data[12].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: b0f933824b427b14bad5ba906eaa5fd7, type: 3}
+    - target: {fileID: 4625744340597693714, guid: c89c7ce1a9516ed40ac71c49b9f05d5c,
+        type: 3}
+      propertyPath: sounds.Array.data[12].volume
+      value: 0.062
+      objectReference: {fileID: 0}
+    - target: {fileID: 4625744340597693714, guid: c89c7ce1a9516ed40ac71c49b9f05d5c,
+        type: 3}
+      propertyPath: sounds.Array.data[13].name
+      value: MonsterGrowl
+      objectReference: {fileID: 0}
+    - target: {fileID: 4625744340597693714, guid: c89c7ce1a9516ed40ac71c49b9f05d5c,
+        type: 3}
+      propertyPath: sounds.Array.data[13].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 6ab6eaa78dea58449bedf88cc9d59805, type: 3}
+    - target: {fileID: 4625744340597693714, guid: c89c7ce1a9516ed40ac71c49b9f05d5c,
+        type: 3}
+      propertyPath: sounds.Array.data[13].volume
+      value: 0.062
+      objectReference: {fileID: 0}
+    - target: {fileID: 4625744340597693714, guid: c89c7ce1a9516ed40ac71c49b9f05d5c,
+        type: 3}
+      propertyPath: sounds.Array.data[14].name
+      value: MonsterHit
+      objectReference: {fileID: 0}
+    - target: {fileID: 4625744340597693714, guid: c89c7ce1a9516ed40ac71c49b9f05d5c,
+        type: 3}
+      propertyPath: sounds.Array.data[14].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: bdf62e7a58ff21f4387808bab09c8976, type: 3}
+    - target: {fileID: 4625744340597693714, guid: c89c7ce1a9516ed40ac71c49b9f05d5c,
+        type: 3}
+      propertyPath: sounds.Array.data[14].volume
       value: 0.062
       objectReference: {fileID: 0}
     - target: {fileID: 4625744340597693715, guid: c89c7ce1a9516ed40ac71c49b9f05d5c,
