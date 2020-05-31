@@ -81,27 +81,6 @@ public class Enemy : MonoBehaviour
             this.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 400));
         }
     }
-/*
-    void OnCollisionExit2D(Collision2D collider)
-    {
-        if (collider.gameObject.tag == "floor")
-        {
-            Speed = 2.0f;
-        }
-    }
-
-    void OnCollisionEnter2D(Collision2D collider)
-    {
-        if (collider.gameObject.tag == "floor")
-        {
-            Speed = 4.5f;
-        }
-        if (collider.gameObject.tag == "thorns")
-        {
-            Speed = 4.5f;
-        }
-    }
-*/
     void FlipSprite()
     {
         if(dir != oldDir)
