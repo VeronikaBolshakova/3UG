@@ -30,6 +30,7 @@ public class movement : MonoBehaviour
     public int health = 10;
     private int maxHealth = 10;
     public int enemyDamage = 1;
+    public int bossDamage = 5;
     private bool D = false;
     private bool A = false;
     private bool W = false;
@@ -96,6 +97,17 @@ public class movement : MonoBehaviour
         if (collider.gameObject.tag == "enemy")
         {
             health -= enemyDamage;
+            healthbar.SetHealth(health);
+            FindObjectOfType<AudioManager>().Play("PlayerHit");
+            if (dir == 0)
+                this.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(-100, 0));
+            else
+                this.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(100, 0));
+        }
+
+        if (collider.gameObject.tag == "boss")
+        {
+            health -= bossDamage;
             healthbar.SetHealth(health);
             FindObjectOfType<AudioManager>().Play("PlayerHit");
             if (dir == 0)

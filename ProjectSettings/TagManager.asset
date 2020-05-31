@@ -14,6 +14,7 @@ TagManager:
   - platform
   - thorns
   - Lab
+  - boss
   layers:
   - Default
   - TransparentFX
