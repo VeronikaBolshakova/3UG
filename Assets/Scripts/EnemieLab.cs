@@ -12,6 +12,7 @@ public class EnemieLab : MonoBehaviour
     private int dir = 0;
     public EnemyHealthBar enemyHealthBar;
     private int oldDir = 1;
+    private bool jump = true;
 
     void Start()
     {
@@ -41,7 +42,7 @@ public class EnemieLab : MonoBehaviour
         if (health <= 0)
         {
             Destroy(this.gameObject);
-            FindObjectOfType<AudioManager>().Play("ZombieDeath");
+            FindObjectOfType<AudioManager>().Play("RobotDeath");
         }
         if (player.transform.position.y >= this.transform.position.y)
         {
@@ -64,7 +65,7 @@ public class EnemieLab : MonoBehaviour
             else
                 this.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(-100, 0));
 
-            FindObjectOfType<AudioManager>().Play("ZombieHit");
+            FindObjectOfType<AudioManager>().Play("RobotDamage");
             enemyHealthBar.SetEnemyHealth(health);
         }
 
@@ -77,16 +78,26 @@ public class EnemieLab : MonoBehaviour
             else
                 this.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(-400, 0));
 
-            FindObjectOfType<AudioManager>().Play("ZombieHit");
+            FindObjectOfType<AudioManager>().Play("RobotDamage");
             enemyHealthBar.SetEnemyHealth(health);
         }
 
         if (collider.gameObject.tag == "player")
         {
-            if (player.transform.position.y >= this.transform.position.y)
+            if (player.transform.position.y > this.transform.position.y && jump == true)
             {
                 this.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 100));
+                jump = false;
             }
+            if (player.transform.position.y <= this.transform.position.y)
+            {
+                jump = true;
+            }
+        }
+        if (collider.gameObject.tag == "water")
+        {
+            Destroy(this.gameObject);
+            FindObjectOfType<AudioManager>().Play("RobotDeath");
         }
     }
     void FlipSprite()
