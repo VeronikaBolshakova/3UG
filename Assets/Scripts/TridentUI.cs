@@ -10,8 +10,18 @@ public class TridentUI : MonoBehaviour
 
     public void SetTransparency(float transparency)
     { 
-        Color color = trident.color;
-        color.a = transparency/maxValue;
-        trident.color = color;
+        if(transparency < maxValue)
+        {
+           if(transparency < 2.0f) {
+                trident.color = new Color(0.6f, 0.6f, 0.6f, 2.0f / maxValue);
+           }
+            else {
+                trident.color = new Color(0.6f, 0.6f, 0.6f, transparency / maxValue);
+            }
+        }
+        else
+        {
+            trident.color = new Color(1f, 1f, 1f, transparency / maxValue);
+        }
     }
 }

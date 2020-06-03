@@ -96,8 +96,9 @@ public class EnemieLab : MonoBehaviour
         }
         if (collider.gameObject.tag == "water")
         {
-            Destroy(this.gameObject);
-            FindObjectOfType<AudioManager>().Play("RobotDeath");
+            health -= bulletDamage;
+            FindObjectOfType<AudioManager>().Play("RobotDamage");
+            enemyHealthBar.SetEnemyHealth(health);
         }
     }
     void FlipSprite()

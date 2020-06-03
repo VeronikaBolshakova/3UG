@@ -16,7 +16,7 @@ public class movement : MonoBehaviour
     public float noWaterGravity = 2.0f;
     public float hSpeedNoWater = 0.1f;
     public int numberOfJumps = 1;
-    int movementType = 0;
+    int movementType = 1;
     bool propeller = false;
     public int dir = 0;
     private Rigidbody2D player;
@@ -25,8 +25,6 @@ public class movement : MonoBehaviour
     public int ammo = 1;
     public Transform attackpoint;
     public GameObject Enemy;
-    public float propellerCooldown = 1.0f;
-    private float propellerCooldownCounter = 1.0f;
     public int health = 10;
     private int maxHealth = 10;
     public int enemyDamage = 1;
@@ -54,12 +52,11 @@ public class movement : MonoBehaviour
     void Update()
     {
         GetKeys();
-
+        Debug.Log(movementType);
     }
 
     void FixedUpdate()
     {
-        propellerCooldownCounter -= Time.deltaTime;
 
         if (movementType == 0) // Movement outside water
         {
@@ -71,15 +68,8 @@ public class movement : MonoBehaviour
             WaterMovement(player);
         }
 
-        if (movementType == 2) // Movement inside water + propeller
-        {
-            WaterPropelledMovement(player);
-            propellerbar.Activate();
-        }
-
         if (health <= 0)
         {
-            //Destroy(this.gameObject);
             FindObjectOfType<DeathScreen>().StartDeathScreen();
         }
     }
@@ -120,27 +110,18 @@ public class movement : MonoBehaviour
         {
             Destroy(collider.gameObject);
             propeller = true;
-            movementType = 2;
+            propellerbar.Activate();
         }
-
     }
 
     void OnTriggerEnter2D(Collider2D environment)
     {
-       
+    
         if (environment.gameObject.tag == "water")
         {
             player.drag = waterDrag;
             player.gravityScale = waterGravity;
-            if (propeller == false)
-            {
-                movementType = 1;
-            }
-
-            if (propeller == true)
-            {
-                movementType = 2;
-            }
+            movementType = 1;
         }
 
         if (environment.gameObject.tag == "Lab")
@@ -150,11 +131,6 @@ public class movement : MonoBehaviour
             player.gravityScale = noWaterGravity;
         }
 
-        if (environment.gameObject.tag == "propeller")
-        {
-            Destroy(environment.gameObject);
-            propeller = true;
-        }
     }
 
 
@@ -297,66 +273,17 @@ public class movement : MonoBehaviour
             jump--;
             W = false;
             player.AddForce(new Vector2(0, vVectorWater));
-            
         }
 
         if (W == false)
         {
             animator.SetBool("Moving", false);
         }
-    }
 
-    void WaterPropelledMovement(Rigidbody2D player)
-    {
-        
-
-        if (D == true)
+        if (Input.GetKey(KeyCode.LeftShift) && propeller == true)
         {
-            if (dir == 1)
+            if (propellerFuel >= 0f)
             {
-                dir = 0;
-                transform.Rotate(0, 180, 0);
-                
-            }
-        }
-
-        if (D == true)
-        {
-            D = false;
-            player.AddForce(hVectorWater, ForceMode2D.Impulse);
-            
-        }
-
-        if (D == false)
-        {
-            animator.SetBool("Moving", false);
-        }
-
-        if (A == true)
-        {
-            if (dir == 0)
-            {
-                dir = 1;
-                transform.Rotate(0, 180, 0);
-                
-            }
-        }
-
-        if (A == true)
-        {
-            A = false;
-            player.AddForce(-hVectorWater, ForceMode2D.Impulse);
-            
-        }
-
-        if (A == false)
-        {
-            animator.SetBool("Moving", false);
-        }
-
-        if (Input.GetKey(KeyCode.W))
-        {
-            if(propellerFuel >= 0f) { 
                 player.AddForce(vVectorWaterPropelled, ForceMode2D.Impulse);
                 propellerFuel--;
                 propellerbar.SetPropellerSlider(propellerFuel);
@@ -370,6 +297,7 @@ public class movement : MonoBehaviour
             }
         }
     }
+
 
     void GetKeys()
     {

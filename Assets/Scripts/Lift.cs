@@ -38,7 +38,7 @@ public class Lift : MonoBehaviour
             animator.SetBool("UpLift", false);
 
         }
-        Debug.Log(liftUp);
+
 
     }
 }
