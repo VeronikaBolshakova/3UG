@@ -13,6 +13,7 @@ public class EnemyFish : MonoBehaviour
     public EnemyHealthBar enemyHealthBar;
     private int oldDir = 0;
     private bool attack = true;
+
     void Start()
     {
         player = GameObject.Find("Player");
@@ -140,7 +141,6 @@ public class EnemyFish : MonoBehaviour
                 }
             }
         }
-
 
         if (collider.gameObject.tag == "player")
         {

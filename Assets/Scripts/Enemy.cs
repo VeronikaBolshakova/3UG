@@ -80,6 +80,7 @@ public class Enemy : MonoBehaviour
         {
             this.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 400));
         }
+
     }
     void FlipSprite()
     {
@@ -87,8 +88,8 @@ public class Enemy : MonoBehaviour
         {
             this.gameObject.transform.Rotate(0, 180, 0);
             oldDir = dir;
-            
         }
     }
+
 }
 

@@ -27,7 +27,6 @@ public class movement : MonoBehaviour
     public GameObject Enemy;
     public int health = 10;
     private int maxHealth = 10;
-    public int enemyDamage = 1;
     public int bossDamage = 5;
     private bool D = false;
     private bool A = false;
@@ -38,6 +37,9 @@ public class movement : MonoBehaviour
     public HealthUI healthUI;
     public Animator animator;
     public bool ismoving = false;
+    private int enemyDamage = 1;
+    private int fishEnemyDamage = 2;
+    public bool key = false;
 
 
     void Start()
@@ -52,7 +54,7 @@ public class movement : MonoBehaviour
     void Update()
     {
         GetKeys();
-        Debug.Log(movementType);
+
     }
 
     void FixedUpdate()
@@ -95,6 +97,17 @@ public class movement : MonoBehaviour
                 this.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(100, 0));
         }
 
+        if (collider.gameObject.tag == "FishEnemy")
+        {
+            health -= fishEnemyDamage;
+            healthbar.SetHealth(health);
+            FindObjectOfType<AudioManager>().Play("PlayerHit");
+            if (dir == 0)
+                this.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(-100, 0));
+            else
+                this.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(100, 0));
+        }
+
         if (collider.gameObject.tag == "boss")
         {
             health -= bossDamage;
@@ -106,12 +119,20 @@ public class movement : MonoBehaviour
                 this.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(100, 0));
         }
 
+        if (collider.gameObject.tag == "key")
+        {
+            Destroy(collider.gameObject);
+            key = true;
+        }
+
         if (collider.gameObject.tag == "propeller")
         {
             Destroy(collider.gameObject);
             propeller = true;
             propellerbar.Activate();
         }
+
+
     }
 
     void OnTriggerEnter2D(Collider2D environment)
@@ -280,7 +301,7 @@ public class movement : MonoBehaviour
             animator.SetBool("Moving", false);
         }
 
-        if (Input.GetKey(KeyCode.LeftShift) && propeller == true)
+        if (Input.GetKey(KeyCode.Space) && propeller == true)
         {
             if (propellerFuel >= 0f)
             {
@@ -332,4 +353,5 @@ public class movement : MonoBehaviour
         healthbar.SetHealth(health);
         FindObjectOfType<AudioManager>().Play("Healing");
     }
+
 }
