@@ -54,6 +54,7 @@ public class Boss : MonoBehaviour
         if (collider.gameObject.tag == "bullet")
         {
             health -= bulletDamage;
+            StartCoroutine(FlashRed());
 
             if (dir == 1)
                 this.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(50, 0));
@@ -67,6 +68,7 @@ public class Boss : MonoBehaviour
         if (collider.gameObject.tag == "trident")
         {
             health -= tridentDamage;
+            StartCoroutine(FlashRed());
 
             if (dir == 1)
                 this.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(400, 0));
@@ -90,5 +92,13 @@ public class Boss : MonoBehaviour
             oldDir = dir;
 
         }
+    }
+
+    IEnumerator FlashRed()
+    {
+        Color32 c = this.gameObject.GetComponent<SpriteRenderer>().color;
+        this.gameObject.GetComponent<SpriteRenderer>().color = Color.red;
+        yield return new WaitForSeconds(0.1f);
+        this.gameObject.GetComponent<SpriteRenderer>().color = c;
     }
 }
