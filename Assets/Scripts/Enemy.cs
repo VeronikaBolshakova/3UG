@@ -53,11 +53,12 @@ public class Enemy : MonoBehaviour
         if (collider.gameObject.tag == "bullet")
         {
             health -= bulletDamage;
-
+            StartCoroutine(FlashRed());
             if (dir == 1)
                 this.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(50, 0));
             else
                 this.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(-50, 0));
+
 
             FindObjectOfType<AudioManager>().Play("ZombieHit");
             enemyHealthBar.SetEnemyHealth(health);
@@ -66,6 +67,7 @@ public class Enemy : MonoBehaviour
         if (collider.gameObject.tag == "trident")
         {
             health -= tridentDamage;
+            StartCoroutine(FlashRed());
 
             if (dir == 1)
                 this.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2 (400,0));
@@ -89,6 +91,14 @@ public class Enemy : MonoBehaviour
             this.gameObject.transform.Rotate(0, 180, 0);
             oldDir = dir;
         }
+    }
+
+    IEnumerator FlashRed()
+    {
+        Color32 c = this.gameObject.GetComponent<SpriteRenderer>().color;
+        this.gameObject.GetComponent<SpriteRenderer>().color = Color.red;
+        yield return new WaitForSeconds(0.1f);
+        this.gameObject.GetComponent<SpriteRenderer>().color = c;
     }
 
 }
