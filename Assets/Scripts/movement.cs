@@ -132,6 +132,7 @@ public class movement : MonoBehaviour
         {
             Destroy(collider.gameObject);
             propeller = true;
+            animator.SetBool("Propeller", true);
             propellerbar.Activate();
         }
 
@@ -194,7 +195,14 @@ public class movement : MonoBehaviour
 
         if(D == false)
         {
-            animator.SetBool("Moving", false);
+            if (propeller == true)
+            {
+                animator.SetBool("MovingPropeller", false);
+            }
+            else
+            {
+                animator.SetBool("Moving", false);
+            }
         }
 
         if (A == true)
@@ -228,7 +236,14 @@ public class movement : MonoBehaviour
         }
         if (A == false)
         {
-            animator.SetBool("Moving", false);
+            if (propeller == true)
+            {
+                animator.SetBool("MovingPropeller", false);
+            }
+            else
+            {
+                animator.SetBool("Moving", false);
+            }
         }
 
         if (W == true && jump > 0)
@@ -240,7 +255,14 @@ public class movement : MonoBehaviour
         }
         if (W == false)
         {
-            animator.SetBool("Moving", false);
+            if (propeller == true)
+            {
+                animator.SetBool("MovingPropeller", false);
+            }
+            else
+            {
+                animator.SetBool("Moving", false);
+            }
         }
     }
 
@@ -267,7 +289,14 @@ public class movement : MonoBehaviour
 
         if (D == false)
         {
-            animator.SetBool("Moving", false);
+            if (propeller == true)
+            {
+                animator.SetBool("MovingPropeller", false);
+            }
+            else
+            {
+                animator.SetBool("Moving", false);
+            }
         }
 
         if (A == true)
@@ -289,7 +318,14 @@ public class movement : MonoBehaviour
 
         if (A == false)
         {
-            animator.SetBool("Moving", false);
+            if (propeller == true)
+            {
+                animator.SetBool("MovingPropeller", false);
+            }
+            else
+            {
+                animator.SetBool("Moving", false);
+            }
         }
 
         if (W == true && jump > 0)
@@ -301,7 +337,14 @@ public class movement : MonoBehaviour
 
         if (W == false)
         {
-            animator.SetBool("Moving", false);
+            if (propeller == true)
+            {
+                animator.SetBool("MovingPropeller", false);
+            }
+            else
+            {
+                animator.SetBool("Moving", false);
+            }
         }
 
         if (Input.GetKey(KeyCode.Space) && propeller == true)
@@ -329,20 +372,39 @@ public class movement : MonoBehaviour
         if (Input.GetKey(KeyCode.D))
         {
             D = true;
-            animator.SetBool("Moving", true);
+            if(propeller == true)
+            {
+                animator.SetBool("MovingPropeller", true);
+            }else
+            { 
+                animator.SetBool("Moving", true);
+            }
         }
        
         if (Input.GetKey(KeyCode.A))
         {
             A = true;
-            animator.SetBool("Moving", true);
-            
+            if (propeller == true)
+            {
+                animator.SetBool("MovingPropeller", true);
+            }
+            else
+            {
+                animator.SetBool("Moving", true);
+            }
         }
        
         if (Input.GetKeyDown(KeyCode.W) && jump > 0)
         {
             W = true;
-            animator.SetBool("Moving", true);
+            if (propeller == true)
+            {
+                animator.SetBool("MovingPropeller", true);
+            }
+            else
+            {
+                animator.SetBool("Moving", true);
+            }
         }
         
     }
