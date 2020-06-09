@@ -15,8 +15,5 @@ public class Tuto1 : MonoBehaviour
             text_Tuto.alpha = transparency;
             transparency -= 0.1f;
         }
-
-
-
     }
 }

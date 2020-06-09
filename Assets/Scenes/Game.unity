@@ -2662,7 +2662,7 @@ GameObject:
   - component: {fileID: 54301149}
   - component: {fileID: 54301148}
   m_Layer: 0
-  m_Name: tuto_1
+  m_Name: tuto_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2686,7 +2686,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Use A and D to move and W to Jump
+  m_text: Right click to attack with the trident and Left click to shoot the pistol
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1076b96c2ed507b468ef5460eceb5076, type: 2}
   m_sharedMaterial: {fileID: 21700968836068756, guid: 1076b96c2ed507b468ef5460eceb5076,
@@ -2756,12 +2756,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 54301148}
-    characterCount: 33
+    characterCount: 73
     spriteCount: 0
-    spaceCount: 9
-    wordCount: 10
+    spaceCount: 13
+    wordCount: 14
     linkCount: 0
-    lineCount: 3
+    lineCount: 4
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
@@ -38656,7 +38656,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Use A and D to move and W to Jump
+  m_text: Press A and D to move sideways and W to Jump
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1076b96c2ed507b468ef5460eceb5076, type: 2}
   m_sharedMaterial: {fileID: 21700968836068756, guid: 1076b96c2ed507b468ef5460eceb5076,
@@ -38726,10 +38726,10 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 692790190}
-    characterCount: 33
+    characterCount: 44
     spriteCount: 0
-    spaceCount: 9
-    wordCount: 10
+    spaceCount: 10
+    wordCount: 11
     linkCount: 0
     lineCount: 3
     pageCount: 1
@@ -74465,8 +74465,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -14.34, y: 0.08}
-  m_SizeDelta: {x: 2.775, y: 1.073}
+  m_AnchoredPosition: {x: -14.106, y: 0.112}
+  m_SizeDelta: {x: 3.169, y: 1.019}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1298051474
 MonoBehaviour:
@@ -75909,7 +75909,7 @@ GameObject:
   - component: {fileID: 1330540947}
   - component: {fileID: 1330540946}
   m_Layer: 0
-  m_Name: Canvas_Tuto_1 (1)
+  m_Name: Canvas_Tuto_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -75924,7 +75924,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1330540945}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9cdec3401453db4418f60be2c2d08195, type: 3}
+  m_Script: {fileID: 11500000, guid: e57be3e143fec1c4ba4206ae2a65dad4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 2052470825}
@@ -76006,8 +76006,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -14.34, y: 0.08}
-  m_SizeDelta: {x: 2.775, y: 1.073}
+  m_AnchoredPosition: {x: -8.18, y: 0.08}
+  m_SizeDelta: {x: 3.996, y: 1.277}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1333477924
 GameObject:
@@ -83640,7 +83640,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1475145711}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -14.33, y: -2.57, z: -10}
+  m_LocalPosition: {x: -14.38, y: -2.6, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1905716448}
@@ -116126,7 +116126,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2052470825}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -14.33, y: -2.57, z: 0}
+  m_LocalPosition: {x: -14.38, y: -2.6, z: 0}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children:
   - {fileID: 2112171372}
