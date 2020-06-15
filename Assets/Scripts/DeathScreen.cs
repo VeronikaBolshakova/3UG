@@ -8,8 +8,8 @@ public class DeathScreen : MonoBehaviour
 
 
     public GameObject deathScreen;
-
-
+    public GameObject player;
+    public CheckpointSystem checkpointSystem;
     public void StartDeathScreen()
     {
         deathScreen.SetActive(true);
@@ -22,7 +22,8 @@ public class DeathScreen : MonoBehaviour
     {
 
         deathScreen.SetActive(false);
-        SceneManager.LoadScene("Game");
+        player.GetComponent<movement>().AddHealth(10);
+        player.transform.position = checkpointSystem.RestartPlayerPosition();
         Time.timeScale = 1f;
 
     }

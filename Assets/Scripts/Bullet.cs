@@ -13,8 +13,7 @@ public class Bullet : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collider)
     {
-        Debug.Log(collider.name);
-        if (collider.gameObject.tag != "water" && collider.name != "Player" && collider.gameObject.tag != "Lab") {
+        if (collider.gameObject.tag != "water" && collider.name != "Player" && collider.gameObject.tag != "Lab" && collider.gameObject.tag != "checkpoint") {
             Destroy(this.gameObject);
         }
     }

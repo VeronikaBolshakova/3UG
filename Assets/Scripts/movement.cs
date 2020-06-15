@@ -40,6 +40,7 @@ public class movement : MonoBehaviour
     private int enemyDamage = 1;
     private int fishEnemyDamage = 2;
     public bool key = false;
+    public CheckpointSystem checkpointSystem;
 
 
     void Start()
@@ -73,6 +74,7 @@ public class movement : MonoBehaviour
         if (health <= 0)
         {
             FindObjectOfType<DeathScreen>().StartDeathScreen();
+ 
         }
     }
 
@@ -128,6 +130,8 @@ public class movement : MonoBehaviour
             key = true;
         }
 
+
+
         if (collider.gameObject.tag == "propeller")
         {
             Destroy(collider.gameObject);
@@ -154,6 +158,12 @@ public class movement : MonoBehaviour
             player.drag = noWaterDrag;
             movementType = 0;
             player.gravityScale = noWaterGravity;
+        }
+
+        if (environment.gameObject.tag == "checkpoint")
+        {
+            checkpointSystem.SetRestartPosition(this.transform.position);
+            Debug.Log("Caguabunga");
         }
 
     }
@@ -354,7 +364,6 @@ public class movement : MonoBehaviour
                 player.AddForce(vVectorWaterPropelled, ForceMode2D.Impulse);
                 propellerFuel--;
                 propellerbar.SetPropellerSlider(propellerFuel);
-                Debug.Log(propellerFuel);
                 jump--;
             }
             if (propellerSound == true)
