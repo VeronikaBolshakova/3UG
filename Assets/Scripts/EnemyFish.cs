@@ -13,11 +13,13 @@ public class EnemyFish : MonoBehaviour
     public EnemyHealthBar enemyHealthBar;
     private int oldDir = 0;
     private bool attack = true;
+    private bool flag;
 
     void Start()
     {
         player = GameObject.Find("Player");
         enemyHealthBar.SetMaxEnemyHealth(health);
+        flag = false;
     }
 
 
@@ -161,9 +163,16 @@ public class EnemyFish : MonoBehaviour
 
     IEnumerator FlashRed()
     {
+        if (flag)
+            yield return new WaitForSeconds(0.01f);
+        else
+            flag = true;
+
         Color32 c = this.gameObject.GetComponent<SpriteRenderer>().color;
         this.gameObject.GetComponent<SpriteRenderer>().color = Color.red;
         yield return new WaitForSeconds(0.1f);
         this.gameObject.GetComponent<SpriteRenderer>().color = c;
+
+        flag = false;
     }
 }

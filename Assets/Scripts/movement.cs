@@ -41,6 +41,7 @@ public class movement : MonoBehaviour
     private int fishEnemyDamage = 2;
     public bool key = false;
     public CheckpointSystem checkpointSystem;
+    private bool flag;
 
 
     void Start()
@@ -49,6 +50,7 @@ public class movement : MonoBehaviour
         player = GetComponent<Rigidbody2D>();
         healthbar.SetMaxHealth(health);
         animator.SetBool("Moving", ismoving);
+        flag = false;
 
     }
 
@@ -163,7 +165,6 @@ public class movement : MonoBehaviour
         if (environment.gameObject.tag == "checkpoint")
         {
             checkpointSystem.SetRestartPosition(this.transform.position);
-            Debug.Log("Caguabunga");
         }
 
     }
@@ -431,10 +432,17 @@ public class movement : MonoBehaviour
 
     IEnumerator FlashRed()
     {
+        if (flag)
+            yield return new WaitForSeconds(0.01f);
+        else
+            flag = true;
+
         Color32 c = this.gameObject.GetComponent<SpriteRenderer>().color;
         this.gameObject.GetComponent<SpriteRenderer>().color = Color.red;
         yield return new WaitForSeconds(0.1f);
         this.gameObject.GetComponent<SpriteRenderer>().color = c;
+
+        flag = false;
     }
     public bool GetPropellerState()
     {

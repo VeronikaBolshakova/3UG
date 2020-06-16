@@ -14,7 +14,6 @@ public class Animation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("miau");
         // Agafem input (com ja vau veure)
         bool walk = Input.GetButton("Horizontal");
         bool stop = Input.GetButtonDown("Fire2");

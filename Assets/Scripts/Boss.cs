@@ -13,6 +13,7 @@ public class Boss : MonoBehaviour
     public EnemyHealthBar bossHealthBar;
     private int oldDir = 1;
     public bool death = false;
+    private bool flag;
 
     public Animator animator;
 
@@ -20,6 +21,7 @@ public class Boss : MonoBehaviour
     {
         player = GameObject.Find("Player");
         bossHealthBar.SetMaxEnemyHealth(health);
+        flag = false;
     }
 
     void FixedUpdate()
@@ -98,9 +100,16 @@ public class Boss : MonoBehaviour
 
     IEnumerator FlashRed()
     {
+        if (flag)
+            yield return new WaitForSeconds(0.01f);
+        else
+            flag = true;
+
         Color32 c = this.gameObject.GetComponent<SpriteRenderer>().color;
         this.gameObject.GetComponent<SpriteRenderer>().color = Color.red;
         yield return new WaitForSeconds(0.1f);
         this.gameObject.GetComponent<SpriteRenderer>().color = c;
+
+        flag = false;
     }
 }

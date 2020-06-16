@@ -13,11 +13,13 @@ public class Enemy : MonoBehaviour
     private int dir = 0;
     public EnemyHealthBar enemyHealthBar;
     private int oldDir = 1;
+    private bool flag;
 
     void Start()
     {
         player = GameObject.Find("Player");
         enemyHealthBar.SetMaxEnemyHealth(health);
+        flag = false;
     }
 
 
@@ -95,10 +97,17 @@ public class Enemy : MonoBehaviour
 
     IEnumerator FlashRed()
     {
+        if (flag)
+            yield return new WaitForSeconds(0.01f);
+        else
+            flag = true;
+
         Color32 c = this.gameObject.GetComponent<SpriteRenderer>().color;
         this.gameObject.GetComponent<SpriteRenderer>().color = Color.red;
         yield return new WaitForSeconds(0.1f);
         this.gameObject.GetComponent<SpriteRenderer>().color = c;
+
+        flag = false;
     }
 
 }
