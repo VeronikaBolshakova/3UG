@@ -12,6 +12,7 @@ public class Boss : MonoBehaviour
     private int dir = 0;
     public EnemyHealthBar bossHealthBar;
     private int oldDir = 1;
+    public bool death = false;
 
     public Animator animator;
 
@@ -45,6 +46,7 @@ public class Boss : MonoBehaviour
         {
             Destroy(this.gameObject);
             FindObjectOfType<AudioManager>().Play("MonsterDeath");
+            death = true;
         }
         FlipSprite();
     }
