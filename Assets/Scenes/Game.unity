@@ -16197,7 +16197,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: The Outside World Must Never Know the Truth
+  m_text: '"The Outside World Must Never Know the Truth"'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1076b96c2ed507b468ef5460eceb5076, type: 2}
   m_sharedMaterial: {fileID: 21700968836068756, guid: 1076b96c2ed507b468ef5460eceb5076,
@@ -16267,7 +16267,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: -0.00000067601184, w: 0}
   m_textInfo:
     textComponent: {fileID: 282557071}
-    characterCount: 43
+    characterCount: 45
     spriteCount: 0
     spaceCount: 7
     wordCount: 8
