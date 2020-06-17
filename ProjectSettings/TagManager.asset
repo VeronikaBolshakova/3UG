@@ -18,6 +18,7 @@ TagManager:
   - FishEnemy
   - key
   - checkpoint
+  - spit
   layers:
   - Default
   - TransparentFX

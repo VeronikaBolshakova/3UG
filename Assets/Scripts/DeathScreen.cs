@@ -22,7 +22,7 @@ public class DeathScreen : MonoBehaviour
     {
 
         deathScreen.SetActive(false);
-        player.GetComponent<movement>().AddHealth(10);
+        player.GetComponent<movement>().MaxHealth();
         player.transform.position = checkpointSystem.RestartPlayerPosition();
         Time.timeScale = 1f;
 

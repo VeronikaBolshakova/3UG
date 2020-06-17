@@ -14,6 +14,7 @@ public class Bullet : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collider)
     {
         if (collider.gameObject.tag != "water" && collider.name != "Player" && collider.gameObject.tag != "Lab" && collider.gameObject.tag != "checkpoint") {
+
             Destroy(this.gameObject);
         }
     }

@@ -12,16 +12,47 @@ public class Boss : MonoBehaviour
     private int dir = 0;
     public EnemyHealthBar bossHealthBar;
     private int oldDir = 1;
-    public bool death = false;
+    public bool death;
     private bool flag;
-
     public Animator animator;
+    private float timer = 0.0f;
+    private int seconds = 0;
+    private float counter = 0.0f;
+    private int currentSeconds = 0;
+    private float spitCooldown = 2.0f;
+    public GameObject bossSpit;
+    public Transform mouth;
+    private bool spit;
 
     void Start()
     {
         player = GameObject.Find("Player");
         bossHealthBar.SetMaxEnemyHealth(health);
         flag = false;
+        counter = spitCooldown;
+        death = false;
+    }
+
+    void Update()
+    {
+        currentSeconds = seconds;
+        timer += Time.deltaTime;
+        seconds = (int)timer % 60;
+        if (currentSeconds != seconds)
+        {
+            counter++;
+        }
+        if (counter >= spitCooldown)
+        {
+            counter = spitCooldown;
+        }
+
+        if (counter >= spitCooldown && spit == false)
+        {
+            spit = true;
+            counter = 0;
+        }
+
     }
 
     void FixedUpdate()
@@ -31,6 +62,12 @@ public class Boss : MonoBehaviour
             if (this.transform.position.x - player.transform.position.x <= 8)
             {
                 this.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(-5, 0));
+                if(spit == true)
+                {
+                    Instantiate(bossSpit, mouth.position, mouth.rotation);
+                    FindObjectOfType<AudioManager>().Play("Spit");
+                    spit = false;
+                }
                 dir = 1;
                 FindObjectOfType<AudioManager>().Play("MonsterGrowl");
             }
@@ -41,14 +78,23 @@ public class Boss : MonoBehaviour
             {
                 dir = 0;
                 this.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(5, 0));
+                if (spit == true)
+                {
+                    Instantiate(bossSpit, mouth.position, mouth.rotation);
+                    FindObjectOfType<AudioManager>().Play("Spit");
+                    spit = false;
+                }
+                FindObjectOfType<AudioManager>().Play("MonsterGrowl");
 
             }
         }
         if (health <= 0)
         {
+            death = true;
             Destroy(this.gameObject);
             FindObjectOfType<AudioManager>().Play("MonsterDeath");
-            death = true;
+
+
         }
         FlipSprite();
     }

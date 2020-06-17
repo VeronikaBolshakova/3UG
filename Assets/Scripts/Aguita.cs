@@ -33,7 +33,7 @@ public class Aguita : MonoBehaviour
             }
 
         }
-        if (player.transform.position.x < 70 && boss.death == true && player.transform.position.y < 0)
+        if (player.transform.position.x < 70 && boss.death == true && player.transform.position.y < 0 && done == true)
         {
             text2.alpha = transparency;
             transparency += 0.1f;

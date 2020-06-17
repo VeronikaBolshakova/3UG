@@ -28,6 +28,7 @@ public class movement : MonoBehaviour
     public int health = 10;
     private int maxHealth = 10;
     public int bossDamage = 5;
+    private int spitDamage = 2;
     private bool D = false;
     private bool A = false;
     private bool W = false;
@@ -51,6 +52,7 @@ public class movement : MonoBehaviour
         healthbar.SetMaxHealth(health);
         animator.SetBool("Moving", ismoving);
         flag = false;
+        health = maxHealth;
 
     }
 
@@ -82,6 +84,7 @@ public class movement : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collider)
     {
+        Debug.Log(collider.gameObject.tag);
         if (collider.gameObject.tag == "floor" || collider.gameObject.tag == "platform" || collider.gameObject.tag == "thorns")
         {
             jump = numberOfJumps;
@@ -101,6 +104,8 @@ public class movement : MonoBehaviour
             else
                 this.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(100, 0));
         }
+
+
 
         if (collider.gameObject.tag == "FishEnemy")
         {
@@ -126,6 +131,8 @@ public class movement : MonoBehaviour
                 this.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(100, 0));
         }
 
+
+
         if (collider.gameObject.tag == "key")
         {
             Destroy(collider.gameObject);
@@ -141,6 +148,7 @@ public class movement : MonoBehaviour
             animator.SetBool("Propeller", true);
             propellerbar.Activate();
         }
+
 
 
     }
@@ -167,8 +175,20 @@ public class movement : MonoBehaviour
             checkpointSystem.SetRestartPosition(this.transform.position);
         }
 
-    }
+        if (environment.gameObject.tag == "spit")
+        {
+            Destroy(environment.gameObject);
+            health -= spitDamage;
+            StartCoroutine(FlashRed());
+            healthbar.SetHealth(health);
+            FindObjectOfType<AudioManager>().Play("PlayerHit");
+            if (dir == 0)
+                this.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(-100, 0));
+            else
+                this.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(100, 0));
+        }
 
+    }
 
     void NoWaterMovement(Rigidbody2D player)
     {
@@ -430,6 +450,12 @@ public class movement : MonoBehaviour
         FindObjectOfType<AudioManager>().Play("Healing");
     }
 
+    public void MaxHealth()
+    {
+        health = maxHealth;
+        healthbar.SetHealth(health);
+
+    }
     IEnumerator FlashRed()
     {
         if (flag)
