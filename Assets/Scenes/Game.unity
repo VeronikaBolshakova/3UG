@@ -150,9 +150,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: '"If You Came Here to Help Us, You''ve Made a Terrible Mistake"'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 1076b96c2ed507b468ef5460eceb5076, type: 2}
-  m_sharedMaterial: {fileID: 21700968836068756, guid: 1076b96c2ed507b468ef5460eceb5076,
-    type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2844,9 +2843,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Right click to attack with the trident and Left click to shoot the pistol
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 1076b96c2ed507b468ef5460eceb5076, type: 2}
-  m_sharedMaterial: {fileID: 21700968836068756, guid: 1076b96c2ed507b468ef5460eceb5076,
-    type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2917,7 +2915,7 @@ MonoBehaviour:
     spaceCount: 13
     wordCount: 14
     linkCount: 0
-    lineCount: 4
+    lineCount: 3
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
@@ -8432,7 +8430,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: You dIED
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 1076b96c2ed507b468ef5460eceb5076, type: 2}
+  m_fontAsset: {fileID: 0}
   m_sharedMaterial: {fileID: 21700968836068756, guid: 1076b96c2ed507b468ef5460eceb5076,
     type: 2}
   m_fontSharedMaterials: []
@@ -16228,9 +16226,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: '"The Outside World Must Never Know the Truth"'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 1076b96c2ed507b468ef5460eceb5076, type: 2}
-  m_sharedMaterial: {fileID: 21700968836068756, guid: 1076b96c2ed507b468ef5460eceb5076,
-    type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -16301,7 +16298,7 @@ MonoBehaviour:
     spaceCount: 7
     wordCount: 8
     linkCount: 0
-    lineCount: 3
+    lineCount: 2
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
@@ -18191,9 +18188,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Kill The Monster Upstairs
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 1076b96c2ed507b468ef5460eceb5076, type: 2}
-  m_sharedMaterial: {fileID: 21700968836068756, guid: 1076b96c2ed507b468ef5460eceb5076,
-    type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -22395,9 +22391,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Enter the Base
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 1076b96c2ed507b468ef5460eceb5076, type: 2}
-  m_sharedMaterial: {fileID: 21700968836068756, guid: 1076b96c2ed507b468ef5460eceb5076,
-    type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -29816,7 +29811,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Thank You For pLAYING
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 1076b96c2ed507b468ef5460eceb5076, type: 2}
+  m_fontAsset: {fileID: 0}
   m_sharedMaterial: {fileID: 21700968836068756, guid: 1076b96c2ed507b468ef5460eceb5076,
     type: 2}
   m_fontSharedMaterials: []
@@ -31777,7 +31772,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Menu
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 1076b96c2ed507b468ef5460eceb5076, type: 2}
+  m_fontAsset: {fileID: 0}
   m_sharedMaterial: {fileID: 21700968836068756, guid: 1076b96c2ed507b468ef5460eceb5076,
     type: 2}
   m_fontSharedMaterials: []
@@ -40257,9 +40252,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Press A and D to move sideways,W to Jump and E to heal
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 1076b96c2ed507b468ef5460eceb5076, type: 2}
-  m_sharedMaterial: {fileID: 21700968836068756, guid: 1076b96c2ed507b468ef5460eceb5076,
-    type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -47805,9 +47799,8 @@ MonoBehaviour:
   m_text: "A.G.\xDC.I.T.A\nA Non Infected Human! Defeat the Monster Upstairs and Come
     Back to Me"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 1076b96c2ed507b468ef5460eceb5076, type: 2}
-  m_sharedMaterial: {fileID: 21700968836068756, guid: 1076b96c2ed507b468ef5460eceb5076,
-    type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -47878,9 +47871,9 @@ MonoBehaviour:
     spaceCount: 13
     wordCount: 19
     linkCount: 0
-    lineCount: 5
+    lineCount: 4
     pageCount: 1
-    materialCount: 2
+    materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
@@ -49775,9 +49768,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Find The Propeller
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 1076b96c2ed507b468ef5460eceb5076, type: 2}
-  m_sharedMaterial: {fileID: 21700968836068756, guid: 1076b96c2ed507b468ef5460eceb5076,
-    type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -57411,7 +57403,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Quit
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 1076b96c2ed507b468ef5460eceb5076, type: 2}
+  m_fontAsset: {fileID: 0}
   m_sharedMaterial: {fileID: 21700968836068756, guid: 1076b96c2ed507b468ef5460eceb5076,
     type: 2}
   m_fontSharedMaterials: []
@@ -62126,7 +62118,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.5, y: -0.5}
+  m_Offset: {x: 0.56023693, y: -0.5}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 1}
@@ -62137,7 +62129,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.87952614, y: 1}
   m_EdgeRadius: 0
 --- !u!1 &1053458461
 GameObject:
@@ -75422,9 +75414,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Press Spacebar To Propell Yourself
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 1076b96c2ed507b468ef5460eceb5076, type: 2}
-  m_sharedMaterial: {fileID: 21700968836068756, guid: 1076b96c2ed507b468ef5460eceb5076,
-    type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -75495,7 +75486,7 @@ MonoBehaviour:
     spaceCount: 4
     wordCount: 5
     linkCount: 0
-    lineCount: 3
+    lineCount: 2
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
@@ -78620,9 +78611,8 @@ MonoBehaviour:
   m_text: "A.G.\xDC.I.T.A\nThank You!! So you Came Here to Save the Base? Well, This
     Is Only The Beginning."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 1076b96c2ed507b468ef5460eceb5076, type: 2}
-  m_sharedMaterial: {fileID: 21700968836068756, guid: 1076b96c2ed507b468ef5460eceb5076,
-    type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -78693,9 +78683,9 @@ MonoBehaviour:
     spaceCount: 16
     wordCount: 22
     linkCount: 0
-    lineCount: 5
+    lineCount: 4
     pageCount: 1
-    materialCount: 2
+    materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
@@ -80108,7 +80098,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.5, y: -0.5}
+  m_Offset: {x: 0.56023693, y: -0.5}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 1}
@@ -80119,7 +80109,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.87952614, y: 1}
   m_EdgeRadius: 0
 --- !u!1 &1345647090
 GameObject:
@@ -80620,7 +80610,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Resume
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 1076b96c2ed507b468ef5460eceb5076, type: 2}
+  m_fontAsset: {fileID: 0}
   m_sharedMaterial: {fileID: 21700968836068756, guid: 1076b96c2ed507b468ef5460eceb5076,
     type: 2}
   m_fontSharedMaterials: []
@@ -86820,7 +86810,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: QUIT
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 1076b96c2ed507b468ef5460eceb5076, type: 2}
+  m_fontAsset: {fileID: 0}
   m_sharedMaterial: {fileID: 21700968836068756, guid: 1076b96c2ed507b468ef5460eceb5076,
     type: 2}
   m_fontSharedMaterials: []
@@ -91659,7 +91649,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Menu
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 1076b96c2ed507b468ef5460eceb5076, type: 2}
+  m_fontAsset: {fileID: 0}
   m_sharedMaterial: {fileID: 21700968836068756, guid: 1076b96c2ed507b468ef5460eceb5076,
     type: 2}
   m_fontSharedMaterials: []
@@ -92176,9 +92166,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Go Back to A.G.\xDC.I.T.A"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 1076b96c2ed507b468ef5460eceb5076, type: 2}
-  m_sharedMaterial: {fileID: 21700968836068756, guid: 1076b96c2ed507b468ef5460eceb5076,
-    type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -92251,7 +92240,7 @@ MonoBehaviour:
     linkCount: 0
     lineCount: 1
     pageCount: 1
-    materialCount: 2
+    materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
@@ -96571,9 +96560,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: You Need to Find the Key to enter the Base
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 1076b96c2ed507b468ef5460eceb5076, type: 2}
-  m_sharedMaterial: {fileID: 21700968836068756, guid: 1076b96c2ed507b468ef5460eceb5076,
-    type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -99969,7 +99957,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Menu
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 1076b96c2ed507b468ef5460eceb5076, type: 2}
+  m_fontAsset: {fileID: 0}
   m_sharedMaterial: {fileID: 21700968836068756, guid: 1076b96c2ed507b468ef5460eceb5076,
     type: 2}
   m_fontSharedMaterials: []
@@ -102838,7 +102826,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Retry
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 1076b96c2ed507b468ef5460eceb5076, type: 2}
+  m_fontAsset: {fileID: 0}
   m_sharedMaterial: {fileID: 21700968836068756, guid: 1076b96c2ed507b468ef5460eceb5076,
     type: 2}
   m_fontSharedMaterials: []
@@ -104009,7 +103997,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.01899898}
+  m_Offset: {x: 0.019272089, y: -0.01899898}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -104020,7 +104008,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.28, y: 3.095886}
+  m_Size: {x: 1.3185441, y: 3.095886}
   m_EdgeRadius: 0
 --- !u!212 &1748446809
 SpriteRenderer:
@@ -109373,9 +109361,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Find The Key
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 1076b96c2ed507b468ef5460eceb5076, type: 2}
-  m_sharedMaterial: {fileID: 21700968836068756, guid: 1076b96c2ed507b468ef5460eceb5076,
-    type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -110632,9 +110619,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Find Your Way Into the Base
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 1076b96c2ed507b468ef5460eceb5076, type: 2}
-  m_sharedMaterial: {fileID: 21700968836068756, guid: 1076b96c2ed507b468ef5460eceb5076,
-    type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -113300,7 +113286,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Quit
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 1076b96c2ed507b468ef5460eceb5076, type: 2}
+  m_fontAsset: {fileID: 0}
   m_sharedMaterial: {fileID: 21700968836068756, guid: 1076b96c2ed507b468ef5460eceb5076,
     type: 2}
   m_fontSharedMaterials: []
