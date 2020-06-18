@@ -17,7 +17,7 @@ public class movement : MonoBehaviour
     private float hSpeedNoWater = 0.1f;
     private int numberOfJumps = 1;
     int movementType = 1;
-    bool propeller = false;
+    public bool propeller;
     public int dir = 0;
     private Rigidbody2D player;
     private bool propellerSound = false;
@@ -53,6 +53,7 @@ public class movement : MonoBehaviour
         animator.SetBool("Moving", ismoving);
         flag = false;
         health = maxHealth;
+        propeller = false;
 
     }
 
@@ -459,7 +460,7 @@ public class movement : MonoBehaviour
     IEnumerator FlashRed()
     {
         if (flag)
-            yield return new WaitForSeconds(0.01f);
+            yield return null;
         else
             flag = true;
 
@@ -467,7 +468,6 @@ public class movement : MonoBehaviour
         this.gameObject.GetComponent<SpriteRenderer>().color = Color.red;
         yield return new WaitForSeconds(0.1f);
         this.gameObject.GetComponent<SpriteRenderer>().color = c;
-
         flag = false;
     }
     public bool GetPropellerState()

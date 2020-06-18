@@ -13,11 +13,13 @@ public class EnemieLab : MonoBehaviour
     public EnemyHealthBar enemyHealthBar;
     private int oldDir = 1;
     private bool jump = true;
+    private bool flag;
 
     void Start()
     {
         player = GameObject.Find("Player");
         enemyHealthBar.SetMaxEnemyHealth(health);
+        flag = false;
     }
 
 
@@ -98,12 +100,16 @@ public class EnemieLab : MonoBehaviour
         }
         if (collider.gameObject.tag == "water")
         {
-            health -= bulletDamage;
+            health = -1;
             StartCoroutine(FlashRed());
             FindObjectOfType<AudioManager>().Play("RobotDamage");
             enemyHealthBar.SetEnemyHealth(health);
         }
     }
+
+
+
+
     void FlipSprite()
     {
         if (dir != oldDir)
@@ -115,9 +121,16 @@ public class EnemieLab : MonoBehaviour
     }
     IEnumerator FlashRed()
     {
+        if (flag)
+            yield return null;
+        else
+            flag = true;
+
         Color32 c = this.gameObject.GetComponent<SpriteRenderer>().color;
         this.gameObject.GetComponent<SpriteRenderer>().color = Color.red;
         yield return new WaitForSeconds(0.1f);
         this.gameObject.GetComponent<SpriteRenderer>().color = c;
+
+        flag = false;
     }
 }

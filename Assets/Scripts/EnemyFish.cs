@@ -150,6 +150,14 @@ public class EnemyFish : MonoBehaviour
         {
             attack = false;
         }
+
+        if (collider.gameObject.tag == "Lab")
+        {
+            health = -1;
+            StartCoroutine(FlashRed());
+            FindObjectOfType<AudioManager>().Play("ZombieFishHit");
+            enemyHealthBar.SetEnemyHealth(health);
+        }
     }
     void FlipSprite()
     {
@@ -164,7 +172,7 @@ public class EnemyFish : MonoBehaviour
     IEnumerator FlashRed()
     {
         if (flag)
-            yield return new WaitForSeconds(0.01f);
+            yield return null;
         else
             flag = true;
 

@@ -85,6 +85,14 @@ public class Enemy : MonoBehaviour
             this.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 400));
         }
 
+        if (collider.gameObject.tag == "Lab")
+        {
+            health = -1;
+            StartCoroutine(FlashRed());
+            FindObjectOfType<AudioManager>().Play("ZombieHit");
+            enemyHealthBar.SetEnemyHealth(health);
+        }
+
     }
     void FlipSprite()
     {
@@ -98,7 +106,7 @@ public class Enemy : MonoBehaviour
     IEnumerator FlashRed()
     {
         if (flag)
-            yield return new WaitForSeconds(0.01f);
+            yield return null;
         else
             flag = true;
 

@@ -10,6 +10,8 @@ public class TextDoor : MonoBehaviour
     public movement playerScript;
     public TextMeshProUGUI text;
     private float transparency = 0;
+    public bool notKey;
+
     void Update()
     {
         player = GameObject.Find("Player");
@@ -17,6 +19,7 @@ public class TextDoor : MonoBehaviour
         {
             text.alpha = transparency;
             transparency += 0.1f;
+            notKey = true;
         }
         if (playerScript.key == true)
         {
