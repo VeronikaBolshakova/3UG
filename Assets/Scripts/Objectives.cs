@@ -16,10 +16,12 @@ public class Objectives : MonoBehaviour
     public TextDoor textDoor;
     public Boss boss;
     private int obj;
+    public bool end;
 
     void start()
     {
         obj = 0;
+        end = false;
     }
 
     void Update()
@@ -58,6 +60,7 @@ public class Objectives : MonoBehaviour
                 if(boss.death == true)
                 {
                     obj = 5;
+                    end = true;
                 }
                 break;
         }

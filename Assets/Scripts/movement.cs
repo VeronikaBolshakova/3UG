@@ -10,6 +10,7 @@ public class movement : MonoBehaviour
     Vector2 hVectorNoWater = new Vector2(0.3f, 0.0f);
     Vector2 hVectorWater = new Vector2(0.2f, 0.0f);
     Vector2 vVectorWaterPropelled = new Vector2(0.0f, 0.5f);
+    Vector2 vVectorNoWaterPropelled = new Vector2(0.0f, 0.8f);
     private float noWaterDrag = 1.0f;
     private float waterDrag = 2.5f;
     private float waterGravity = 1.0f;
@@ -294,6 +295,22 @@ public class movement : MonoBehaviour
             else
             {
                 animator.SetBool("Moving", false);
+            }
+        }
+        if (Input.GetKey(KeyCode.Space) && propeller == true)
+        {
+            if (propellerFuel >= 40.0f)
+            {
+                player.AddForce(vVectorNoWaterPropelled, ForceMode2D.Impulse);
+                propellerFuel--;
+                propellerbar.SetPropellerSlider(propellerFuel);
+                jump--;
+            }
+            if (propellerSound == true)
+            {
+
+                FindObjectOfType<AudioManager>().Play("Jetpack");
+                propellerSound = false;
             }
         }
     }
