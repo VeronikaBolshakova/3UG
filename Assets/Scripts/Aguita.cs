@@ -12,6 +12,7 @@ public class Aguita : MonoBehaviour
     public Boss boss;
     private float transparency = 0.0f;
     private bool done = false;
+    private bool done2 = false;
     void Update()
     {
 
@@ -33,10 +34,14 @@ public class Aguita : MonoBehaviour
             }
 
         }
-        if (player.transform.position.x < 70 && boss.death == true && player.transform.position.y < 0 && done == true)
+        if (player.transform.position.x < 70 && boss.death == true && player.transform.position.y < 0 && done2 == false)
         {
             text2.alpha = transparency;
             transparency += 0.1f;
+            if (transparency > 1.0f)
+            {
+                done2 = true;
+            }
         }
     }
 }
